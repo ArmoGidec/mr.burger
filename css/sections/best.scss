@@ -1,0 +1,26 @@
+.best {
+    width: 100%;
+    height: 100vh;
+    background: url('../../../images/bg.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.best__title {
+    text-align: center;
+}
+
+.best__list {
+    display: flex;
+    text-align: center;
+    margin-top: 55px;
+}
+
+.best__list-item {
+    width: 286px;
+
+    &+.best__list-item {
+        margin-left: 37px;
+    }
+}

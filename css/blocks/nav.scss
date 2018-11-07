@@ -1,0 +1,17 @@
+.nav__list {
+    display: flex;
+}
+
+.nav__list-item + .nav__list-item {
+    list-style-type: disc;
+    margin-left: 35px;
+    padding-left: 5px;
+    color: #fff;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    font-family: Ubuntu;
+    font-weight: 500;
+}
