@@ -1,13 +1,10 @@
 @import './layout/normalize.min.scss';
 @import './layout/fonts.scss';
+@import './layout/reset.scss';
 @import './layout/base.scss';
 
-@import './blocks/header.scss';
-@import './blocks/nav.scss';
-@import './blocks/section-paginator.scss';
-@import './blocks/scroll-down.scss';
 @import './sections/greeting.scss';
 @import './sections/best.scss';
-@import './blocks/reason.scss';
 @import './sections/burgers.scss';
 @import './sections/reviews.scss';
+@import './blocks/section-paginator.scss';

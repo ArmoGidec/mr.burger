@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+}
+
+.header__btns {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-family: Ubuntu;
+    font-weight: 500;
+    font-size: 13px;
+    .btn-order {
+        margin-left: 15px;
+    }
+}
+
+@import './nav.scss';

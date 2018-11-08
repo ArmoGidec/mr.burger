@@ -3,9 +3,17 @@
     background-size: cover;
 }
 
+.greeting__container {
+    flex: 1;
+}
+
+@import '../blocks/header.scss';
+
 .greeting__content {
+    flex: .8;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: #fff;
     font-family: LifeHack;
     font-size: 65px;
@@ -34,3 +42,5 @@
     top: 40px;
     left: -30px;
 }
+
+@import '../blocks/scroll-down.scss';
