@@ -1,0 +1,39 @@
+.team {
+    background: url('../images/team.png') center center / cover no-repeat;
+    position: relative;
+}
+
+.team-block {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0.9;
+    background: $dark-grey;
+    padding: 113px 97px;
+    color: white;
+    font-family: Gagalin;
+    font-size: 14px;
+}
+
+.team__title {
+    color: $yellow;
+}
+
+.team__member-desctiption {
+    font-family: Ubuntu;
+    font-weight: 300;
+    height: 0;
+    visibility: hidden;
+}
+
+.team__member-post {
+    font-weight: bold;
+}
+
+.team__member--active {
+    .team__member-desctiption {
+        height: 100%;
+        visibility: visible;
+    }
+}
