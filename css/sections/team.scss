@@ -12,7 +12,7 @@
     background: $dark-grey;
     padding: 113px 97px;
     color: white;
-    font-family: Gagalin;
+    @include gagalin;
     font-size: 14px;
 }
 
@@ -32,8 +32,7 @@
 }
 
 .team__member-desctiption {
-    font-family: Ubuntu;
-    font-weight: 300;
+    @include ubuntu(light);
     height: 0;
     // visibility: hidden;
     overflow: hidden;

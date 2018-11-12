@@ -11,7 +11,7 @@
 
 <body>
     <div class="wrap">
-        <section class="greeting section">
+        <section class="greeting section" id="greeting">
             <div class="container greeting__container">
                 <header class="header">
                     <div class="logo"><img src="./icons/logo.svg" alt="" class="logo__img"></div>
@@ -48,7 +48,7 @@
             </div>
         </section>
 
-        <section class="best section">
+        <section class="best section" id="best">
             <div class="container">
                 <div class="best__title section-title">МЫ ЛУЧШИЕ</div>
                 <div class="best__list-wrap">
@@ -89,7 +89,7 @@
             </div>
         </section>
 
-        <section class="team section">
+        <section class="team section" id="team">
             <div class="team-block">
                 <div class="team__title section-title">Команда</div>
                 <ul class="team__list">
@@ -145,7 +145,57 @@
             </div>
         </section>
 
-        <section class="reviews section">
+        <section class="section menu" id="menu">
+            <div class="section-title menu__title">МЕНЮ</div>
+            <div class="menu-block">
+                <ul class="menu__list">
+                    <li class="menu__item-for menu__item-for--active">
+                        <a href="#" class="menu__item-trigger" style="background-image: url('./images/for-meat.png');">
+                            <div class="menu__trigger-text">
+                                Для мясоедов
+                            </div>
+                        </a>
+                        <div class="menu__item-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Aliquam ab quam quidem quisquam natus praesentium minima eius dicta possimus explicabo
+                            modi, ex vitae corporis, itaque nemo maiores, vero animi suscipit at? In sint libero fuga
+                            consequatur atque aspernatur, nesciunt aliquid, accusamus consectetur obcaecati expedita!
+                            A, commodi repellat asperiores distinctio hic consequatur repudiandae. Veniam ipsam,
+                            temporibus nisi porro, inventore praesentium veritatis, nobis nostrum ipsa possimus quasi
+                            rem eum necessitatibus esse dolore!</div>
+                    </li>
+                    <li class="menu__item-for">
+                        <a href="#" class="menu__item-trigger" style="background-image: url('./images/for-vegan.png');">
+                            <div class="menu__trigger-text">
+                                Вегетарианское
+                            </div>
+                        </a>
+                        <div class="menu__item-description">Ducimus voluptatem velit optio dolor vitae ex nemo ut ab,
+                            consequuntur laborum neque blanditiis culpa nostrum soluta! Fugit, doloribus unde animi
+                            accusantium suscipit ratione illo? Impedit repudiandae amet quia molestiae quo architecto
+                            nam dolorem reiciendis fugiat id, provident eligendi possimus labore fugit. Blanditiis
+                            debitis iure accusantium quisquam architecto autem magnam deserunt dolorem quaerat nostrum
+                            voluptatibus ducimus illum eaque veritatis nulla, ut accusamus earum exercitationem quia
+                            animi ad! Rem, quaerat vitae?</div>
+                    </li>
+                    <li class="menu__item-for">
+                        <a href="#" class="menu__item-trigger" style="background-image: url('./images/for-diet.png');">
+                            <div class="menu__trigger-text">
+                                Диетическое
+                            </div>
+                        </a>
+                        <div class="menu__item-description">Suscipit beatae quas architecto fuga dolorum. Odit
+                            recusandae exercitationem aspernatur, in itaque quae quidem quam iste veniam dolores,
+                            maxime necessitatibus aliquid tenetur non! Odio maxime odit repellendus quis consectetur
+                            at, aperiam consequuntur ad ab similique recusandae non? Minus rem laudantium eveniet, hic
+                            eius sint repellendus sunt ab voluptates sit quisquam, debitis ipsa beatae eos eligendi
+                            quo, totam error aspernatur cum quis officiis voluptas? Voluptates, unde placeat culpa
+                            reprehenderit doloremque nam.</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="reviews section" id=reviews>
             <div class="reviews__reviewer text-white" style="background-image: url('./photos/photo-1.png')">
                 <div class="reviews__review">
                     <div class="reviews__review-author">Константин Спилберг</div>
@@ -222,18 +272,17 @@
     </div>
     <div class="section-paginator">
         <ul class="paginator__list">
-            <li class="paginator__list-item active"><a href="#" class="paginator__link"></a></li>
-            <li class="paginator__list-item"><a href="#" class="paginator__link"></a></li>
-            <li class="paginator__list-item"><a href="#" class="paginator__link"></a></li>
-            <li class="paginator__list-item"><a href="#" class="paginator__link"></a></li>
-            <li class="paginator__list-item"><a href="#" class="paginator__link"></a></li>
-            <li class="paginator__list-item"><a href="#" class="paginator__link"></a></li>
-            <li class="paginator__list-item"><a href="#" class="paginator__link"></a></li>
-            <li class="paginator__list-item"><a href="#" class="paginator__link"></a></li>
-            <li class="paginator__list-item"><a href="#" class="paginator__link"></a></li>
+            <li class="paginator__list-item active"><a href="#greeting" class="paginator__link"></a></li>
+            <li class="paginator__list-item"><a href="#best" class="paginator__link"></a></li>
+            <li class="paginator__list-item"><a href="#burgers" class="paginator__link"></a></li>
+            <li class="paginator__list-item"><a href="#team" class="paginator__link"></a></li>
+            <li class="paginator__list-item"><a href="#menu" class="paginator__link"></a></li>
+            <li class="paginator__list-item"><a href="#reviews" class="paginator__link"></a></li>
+            <li class="paginator__list-item"><a href="#how-work" class="paginator__link"></a></li>
+            <li class="paginator__list-item"><a href="#form" class="paginator__link"></a></li>
+            <li class="paginator__list-item"><a href="#contacts" class="paginator__link"></a></li>
         </ul>
     </div>
-    <footer class="footer"></footer>
 </body>
 
 </html>

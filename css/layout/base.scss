@@ -24,8 +24,7 @@ $dark-grey: #2f3234;
     border: none;
     padding: 13px 15px;
     border-radius: 5px;
-    font-family: Ubuntu;
-    font-weight: 500;
+    @include ubuntu(medium);
     text-decoration: none;
     background-color: $dark-grey;
     color: #fff;
@@ -47,6 +46,6 @@ $dark-grey: #2f3234;
 }
 
 .section-title {
-    font-family: Gagalin;
+    @include gagalin;
     font-size: 72px;
 }
