@@ -1,5 +1,8 @@
 .nav__list {
     display: flex;
+    @include tablets {
+        display: none;
+    }
 }
 
 .nav__list-item {

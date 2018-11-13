@@ -1,22 +1,31 @@
-$dark-orange: #e45028;
-$yellow: #f9b43b;
-$dark-grey: #2f3234;
+html {
+    font-size: 16px;
+
+    @include tablets {
+        font-size: 14px;
+    }
+
+    @include phones {
+        font-size: 13px;
+    }
+}
 
 .wrap {
     position: relative;
-    width: 100%;
-    min-width: rem(960px);
     min-height: 100%;
     overflow: hidden;
 }
 
 .container {
-    width: rem(980px);
-    padding: 0 rem(20px);
+    width: 100%;
+    max-width: rem(980px);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     position: relative;
+    @include tablets {
+        width: 95%;
+    }
 }
 
 .d-flex {

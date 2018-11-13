@@ -2,6 +2,9 @@
     position: fixed;
     right: rem(50px);
     top: rem(91px);
+    @include tablets {
+        display: none;
+    }
 }
 
 .section-paginator .paginator__list-item {

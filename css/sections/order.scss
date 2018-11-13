@@ -9,17 +9,27 @@
     margin-bottom: rem(25px);
 }
 
-.order__inputs {
+.order__form {
     display: flex;
-
+    justify-content: center;
+    align-items: center;
     label {
         @include ubuntu(light);
         font-size: rem(14px);
+    }
+
+    @include tablets {
+        flex-direction: column;
     }
 }
 
 .order__col {
     width: 50%;
+
+    @include tablets {
+        width: 75%;
+
+    }
 }
 
 .order__row {

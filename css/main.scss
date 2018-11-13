@@ -1,3 +1,10 @@
+$dark-orange: #e45028;
+$yellow: #f9b43b;
+$dark-grey: #2f3234;
+
+$tablets: 768px;
+$phones: 480px;
+
 @import './layout/media.scss';
 @import './layout/normalize.min.scss';
 @import './layout/fonts.scss';

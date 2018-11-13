@@ -10,9 +10,19 @@
     margin-left: auto;
     @include ubuntu(medium);
     font-size: rem(13px);
-    .btn-order {
-        margin-left: rem(15px);
+}
+
+.header__links {
+    margin-left: rem(15px);
+    display: flex;
+    align-items: center;
+}
+
+.btn-order {
+    @include tablets {
+        display: none;
     }
 }
 
 @import './nav.scss';
+@import './menu-link.scss';
