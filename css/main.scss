@@ -2,9 +2,17 @@
 @import './layout/fonts.scss';
 @import './layout/reset.scss';
 @import './layout/base.scss';
+@import './layout/icon.scss';
 
 @import './sections/greeting.scss';
 @import './sections/best.scss';
+@import './sections/team.scss';
 @import './sections/burgers.scss';
+@import './sections/menu.scss';
 @import './sections/reviews.scss';
+@import './sections/order.scss';
+@import './sections/contacts.scss';
+
+@import './blocks/footer.scss';
+@import './blocks/socials.scss';
 @import './blocks/section-paginator.scss';

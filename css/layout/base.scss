@@ -1,4 +1,5 @@
 $dark-orange: #e45028;
+$yellow: #f9b43b;
 $dark-grey: #2f3234;
 
 .wrap {
@@ -18,16 +19,28 @@ $dark-grey: #2f3234;
     position: relative;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
 .btn {
     display: inline-block;
     border: none;
     padding: 13px 15px;
     border-radius: 5px;
-    font-family: Ubuntu;
-    font-weight: 500;
+    @include ubuntu(medium);
     text-decoration: none;
     background-color: $dark-grey;
     color: #fff;
+    cursor: pointer;
+}
+
+.bg-none {
+    background: none;
 }
 
 .bg-dark-orange {
@@ -46,6 +59,62 @@ $dark-grey: #2f3234;
 }
 
 .section-title {
-    font-family: Gagalin;
+    @include gagalin;
     font-size: 72px;
+}
+
+.input-wrap {
+    margin-top: 19px;
+    padding: 0 10px;
+    flex-basis: 0;
+    flex-grow: 1;
+    min-width: 1px;
+
+    label {
+        margin-bottom: 7px;
+        cursor: pointer;
+    }
+    input[type=text], textarea {
+        border-radius: 5px;
+        border: solid 2px #d1cfcb;
+        &:focus {
+            outline: none;
+            border: solid 2px $yellow;
+        }
+    }
+    input[type=radio], input[type=checkbox] {
+        position: absolute;
+        visibility: hidden;
+    }
+    .radio-btn, .checkbox-btn {
+        width: 15px;
+        height: 15px;
+        margin: auto 10px auto 0;
+        position: relative;
+        background: #fff;
+    }
+    .radio-btn {
+        border-radius: 50%;
+    }
+    input[type=radio]:checked + label .radio-btn::before {
+        content: " ";
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        background-color: $dark-orange;
+    }
+    input[type=checkbox]:checked + label .checkbox-btn::before {
+        content: " ";
+        display: block;
+        height: 11px;
+        width: 7px;
+        border-right: 3px solid $dark-orange;
+        border-bottom: 3px solid $dark-orange;
+        box-sizing: border-box;
+        transform: rotate(45deg) translateX(3px) translateY(-3px);
+    }
 }

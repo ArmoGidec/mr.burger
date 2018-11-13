@@ -1,0 +1,28 @@
+.order {
+    background: url('../images/chalkboard_texture.png') center center / cover no-repeat;
+    justify-content: center;
+}
+
+.order__title {
+    text-align: center;
+    color: $yellow;
+    margin-bottom: 25px;
+}
+
+.order__inputs {
+    display: flex;
+
+    label {
+        @include ubuntu(light);
+        font-size: 14px;
+    }
+}
+
+.order__col {
+    width: 50%;
+}
+
+.order__row {
+    display: flex;
+    justify-content: space-between;
+}

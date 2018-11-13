@@ -1,0 +1,78 @@
+.menu {
+    background: url('../images/menu-bg.png') 50% / cover no-repeat;
+    position: relative;
+}
+
+.menu__title {
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.menu-block {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    max-width: 50%;
+}
+
+.menu__list {
+    display: flex;
+    height: 100%;
+}
+
+.menu__item-for {
+    display: flex;
+    max-height: 100%;
+    color: white;
+    &--active {
+        .menu__item-trigger {
+            color: $yellow;
+        }
+        .menu__item-description {
+            width: 100%;
+            overflow: auto;
+            padding: 60px 30px;
+        }
+    }
+}
+
+.menu__item-trigger {
+    background: center center / auto 100% no-repeat;
+    @include gagalin;
+    color: white;
+    text-decoration: none;
+    width: 80px;
+    height: 100%;
+    float: left;
+    position: relative;
+    &::before {
+        content: " ";
+        display: block;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.menu__trigger-text {
+    font-size: 40px;
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: 0 0;
+    left: 50%;
+    top: 100%;
+    margin-top: -20px;
+}
+
+.menu__item-description {
+    width: 0;
+    overflow: hidden;
+    background-color: $dark-grey;
+    opacity: 0.93;
+    @include ubuntu(light);
+    font-size: 14px;
+    line-height: 1.8;
+}

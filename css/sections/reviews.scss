@@ -26,12 +26,11 @@
 }
 
 .reviews__review-author {
-    font-family: Gagalin;
+    @include gagalin;
 }
 
 .reviews__review-text {
-    font-family: Ubuntu;
-    font-weight: 300;
+    @include ubuntu(light);
     line-height: 1.71;
     margin: 30px 0 17px 0;
 }

@@ -9,15 +9,14 @@
 }
 
 .reason__title {
-    font-family: Lifehack;
+    @include lifehack;
     font-size: 24px;
     color: #2f3234;
     margin-bottom: 20px;
 }
 
 .reason__description {
-    font-family: Ubuntu;
-    font-weight: 300;
+    @include ubuntu(light);
     font-size: 14px;
     line-height: 1.71;
     color: rgba(47, 50, 52, 0.8);

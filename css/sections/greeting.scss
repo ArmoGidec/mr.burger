@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-family: LifeHack;
+    @include lifehack;
     font-size: 65px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .greeting__title {
-    color: #f9b43b;
+    color: $yellow;
 }
 
 .greeting__sub-title {
