@@ -4,13 +4,13 @@
 }
 
 .socials__item {
-    margin-left: 10px;
+    margin-left: rem(10px);
 }
 
 .socials__link {
     display: inline-block;
-    max-width: 23px;
-    max-height: 20px;
+    max-width: rem(23px);
+    max-height: rem(20px);
     opacity: 0.3;
     transition: 0.3s;
     &:hover {
@@ -19,7 +19,7 @@
 }
 
 .socials__link-icon {
-    width: 20px;
-    height: 20px;
+    width: rem(20px);
+    height: rem(20px);
     fill: #fff;
 }

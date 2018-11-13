@@ -6,7 +6,7 @@
 .order__title {
     text-align: center;
     color: $yellow;
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
 }
 
 .order__inputs {
@@ -14,7 +14,7 @@
 
     label {
         @include ubuntu(light);
-        font-size: 14px;
+        font-size: rem(14px);
     }
 }
 

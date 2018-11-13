@@ -16,11 +16,11 @@
     justify-content: center;
     color: #fff;
     @include lifehack;
-    font-size: 65px;
+    font-size: rem(65px);
 }
 
 .greeting__text {
-    margin-left: 45px;
+    margin-left: rem(45px);
 }
 
 .greeting__title {
@@ -28,9 +28,9 @@
 }
 
 .greeting__sub-title {
-    width: 406px;
-    letter-spacing: -1.6px;
-    margin-top: 20px;
+    width: rem(406px);
+    letter-spacing: rem(-1.6px);
+    margin-top: rem(20px);
 }
 
 .greeting__images {
@@ -39,8 +39,8 @@
 
 .greeting__images .greeting__drops {
     position: absolute;
-    top: 40px;
-    left: -30px;
+    top: rem(40px);
+    left: rem(-30px);
 }
 
 @import '../blocks/scroll-down.scss';

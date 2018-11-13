@@ -1,7 +1,7 @@
 .header {
     display: flex;
     align-items: center;
-    padding-top: 12px;
+    padding-top: rem(12px);
 }
 
 .header__btns {
@@ -9,9 +9,9 @@
     align-items: center;
     margin-left: auto;
     @include ubuntu(medium);
-    font-size: 13px;
+    font-size: rem(13px);
     .btn-order {
-        margin-left: 15px;
+        margin-left: rem(15px);
     }
 }
 

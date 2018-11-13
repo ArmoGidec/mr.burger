@@ -11,14 +11,14 @@
 .best__list {
     display: flex;
     text-align: center;
-    margin-top: 55px;
+    margin-top: rem(55px);
 }
 
 .best__list-item {
-    width: 286px;
+    width: rem(286px);
 
     &+.best__list-item {
-        margin-left: 37px;
+        margin-left: rem(37px);
     }
 }
 

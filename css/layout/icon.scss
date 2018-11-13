@@ -1,8 +1,8 @@
 .caret-down {
     display: inline-block;
-    width: 9px;
-    height: 7px;
+    width: rem(9px);
+    height: rem(7px);
     border-style: solid;
-    border-width: 7px 4.5px 0 4.5px;
+    border-width: rem(7px) rem(4.5px) 0 rem(4.5px);
     border-color: $yellow transparent transparent transparent;
 }

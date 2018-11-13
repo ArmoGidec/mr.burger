@@ -5,14 +5,14 @@ $dark-grey: #2f3234;
 .wrap {
     position: relative;
     width: 100%;
-    min-width: 960px;
+    min-width: rem(960px);
     min-height: 100%;
     overflow: hidden;
 }
 
 .container {
-    width: 980px;
-    padding: 0 20px;
+    width: rem(980px);
+    padding: 0 rem(20px);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -30,8 +30,8 @@ $dark-grey: #2f3234;
 .btn {
     display: inline-block;
     border: none;
-    padding: 13px 15px;
-    border-radius: 5px;
+    padding: rem(13px) rem(15px);
+    border-radius: rem(5px);
     @include ubuntu(medium);
     text-decoration: none;
     background-color: $dark-grey;
@@ -60,26 +60,26 @@ $dark-grey: #2f3234;
 
 .section-title {
     @include gagalin;
-    font-size: 72px;
+    font-size: rem(72px);
 }
 
 .input-wrap {
-    margin-top: 19px;
-    padding: 0 10px;
+    margin-top: rem(19px);
+    padding: 0 rem(10px);
     flex-basis: 0;
     flex-grow: 1;
-    min-width: 1px;
+    min-width: rem(1px);
 
     label {
-        margin-bottom: 7px;
+        margin-bottom: rem(7px);
         cursor: pointer;
     }
     input[type=text], textarea {
-        border-radius: 5px;
-        border: solid 2px #d1cfcb;
+        border-radius: rem(5px);
+        border: solid rem(2px) #d1cfcb;
         &:focus {
             outline: none;
-            border: solid 2px $yellow;
+            border: solid rem(2px) $yellow;
         }
     }
     input[type=radio], input[type=checkbox] {
@@ -87,9 +87,9 @@ $dark-grey: #2f3234;
         visibility: hidden;
     }
     .radio-btn, .checkbox-btn {
-        width: 15px;
-        height: 15px;
-        margin: auto 10px auto 0;
+        width: rem(15px);
+        height: rem(15px);
+        margin: auto rem(10px) auto 0;
         position: relative;
         background: #fff;
     }
@@ -99,22 +99,22 @@ $dark-grey: #2f3234;
     input[type=radio]:checked + label .radio-btn::before {
         content: " ";
         display: block;
-        width: 7px;
-        height: 7px;
+        width: rem(7px);
+        height: rem(7px);
         border-radius: 50%;
         position: absolute;
-        top: 4px;
-        left: 4px;
+        top: rem(4px);
+        left: rem(4px);
         background-color: $dark-orange;
     }
     input[type=checkbox]:checked + label .checkbox-btn::before {
         content: " ";
         display: block;
-        height: 11px;
-        width: 7px;
-        border-right: 3px solid $dark-orange;
-        border-bottom: 3px solid $dark-orange;
+        height: rem(11px);
+        width: rem(7px);
+        border-right: rem(3px) solid $dark-orange;
+        border-bottom: rem(3px) solid $dark-orange;
         box-sizing: border-box;
-        transform: rotate(45deg) translateX(3px) translateY(-3px);
+        transform: rotate(45deg) translateX(rem(3px)) translateY(rem(-3px));
     }
 }

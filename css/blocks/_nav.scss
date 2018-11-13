@@ -19,10 +19,10 @@
     &::after {
       content: "";
       display: block;
-      width: 4px;
-      height: 4px;
+      width: rem(4px);
+      height: rem(4px);
       border-radius: 50%;
       background: #fff;   
-      margin: 0 16px;
+      margin: 0 rem(16px);
     }
   }
