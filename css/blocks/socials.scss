@@ -1,3 +1,25 @@
+.socials {
+    display: flex;
+    align-items: center;
+}
+
 .socials__item {
-    display: inline;
+    margin-left: 10px;
+}
+
+.socials__link {
+    display: inline-block;
+    max-width: 23px;
+    max-height: 20px;
+    opacity: 0.3;
+    transition: 0.3s;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.socials__link-icon {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
 }
