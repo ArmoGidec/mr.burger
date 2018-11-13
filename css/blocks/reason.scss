@@ -1,7 +1,7 @@
 .reason__img-wrap {
-    height: 90px;
+    height: rem(90px);
     display: flex;
-    margin-bottom: 33px;
+    margin-bottom: rem(33px);
 }
 
 .reason__img {
@@ -10,14 +10,14 @@
 
 .reason__title {
     @include lifehack;
-    font-size: 24px;
+    font-size: rem(24px);
     color: #2f3234;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
 }
 
 .reason__description {
     @include ubuntu(light);
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1.71;
     color: rgba(47, 50, 52, 0.8);
 }

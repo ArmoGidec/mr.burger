@@ -7,14 +7,14 @@
     width: 25%;
     height: 50%;
     position: relative;
-    font-size: 14px;
+    font-size: rem(14px);
     background: center center / cover no-repeat;
 }
 
 .reviews__review {
     height: 100%;
     background-color: rgba(20, 20, 20, 0.7);
-    padding: 50px 33px 0 20px;
+    padding: rem(50px) rem(33px) 0 rem(20px);
     opacity: 0;
     visibility: hidden;
     transition: 0.3s linear all;
@@ -32,6 +32,6 @@
 .reviews__review-text {
     @include ubuntu(light);
     line-height: 1.71;
-    margin: 30px 0 17px 0;
+    margin: rem(30px) 0 rem(17px) 0;
 }
 
