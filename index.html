@@ -15,8 +15,7 @@
             <div class="container greeting__container">
                 <header class="header">
                     <div class="logo">
-                        <svg class="logo__img" x="0px" y="0px"
-                        width="98.265px" height="74.317px">
+                        <svg class="logo__img" x="0px" y="0px" width="98.265px" height="74.317px">
                             <use xlink:href="./sprite/sprite.svg#logo"></use>
                         </svg>
                     </div>
@@ -279,6 +278,74 @@
                         такой сочной, а сыр таким плавленным.</div>
                     <a href="#" class="reviews__review-link btn bg-dark-grey text-white">Подробнее</a>
                 </div>
+            </div>
+        </section>
+
+        <section class="section order">
+            <div class="container">
+                <div class="section-title order__title">Закажите доставку</div>
+                <form class="order__form">
+                    <div class="order__inputs text-white">
+                        <div class="order__col">
+                            <div class="order__row">
+                                <div class="input-wrap d-flex flex-direction-column">
+                                    <label for="name">Имя</label><input type="text" name="name" id="name">
+                                </div>
+                                <div class="input-wrap d-flex flex-direction-column">
+                                    <label for="phone">Телефон</label><input type="text" name="phone" id="phone">
+                                </div>
+                            </div>
+                            <div class="order__row">
+                                <div class="input-wrap d-flex flex-direction-column">
+                                    <label for="street">Улица</label><input type="text" name="street" id="street">
+                                </div>
+                            </div>
+                            <div class="order__row">
+                                <div class="input-wrap d-flex flex-direction-column">
+                                    <label for="house">Дом</label><input type="text" name="house" id="house">
+                                </div>
+                                <div class="input-wrap d-flex flex-direction-column">
+                                    <label for="housing">Корпус</label><input type="text" name="housing" id="housing">
+                                </div>
+                                <div class="input-wrap d-flex flex-direction-column">
+                                    <label for="flat">Квартира</label><input type="text" name="flat" id="flat">
+                                </div>
+                                <div class="input-wrap d-flex flex-direction-column">
+                                    <label for="floor">Этаж</label><input type="text" name="floor" id="floor">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order__col">
+                            <div class="order__row">
+                                <div class="input-wrap d-flex flex-direction-column">
+                                    <label for="comment">Комментарий</label><textarea name="comment" id="comment" style="width: 460px; height: 110px;"></textarea>
+                                </div>
+                            </div>
+                            <div class="order__row">
+                                <div class="input-wrap">
+                                    <input type="radio" name="bill" id="cash" checked>
+                                    <label for="cash" class="d-flex"><div class="radio-btn"></div>Потребуется сдача</label>
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="radio" name="bill" id="card">
+                                    <label for="card" class="d-flex"><div class="radio-btn"></div>Оплата по карте</label>
+                                </div>
+                            </div>
+                            <div class="order__row">
+                                <div class="input-wrap ">
+                                    <input type="checkbox" name="not-call" id="not-call" checked>
+                                    <label for="not-call" class="d-flex"><div class="checkbox-btn"></div>Не перезванивать</label>
+                                </div>
+                            </div>
+                            <div class="order__row order__btns">
+                                <div class="input-wrap">
+                                    <button class="btn bg-dark-orange" type="submit">Заказать</button>
+                                    <button class="btn bg-none" type="reset">Очистить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </section>
 
