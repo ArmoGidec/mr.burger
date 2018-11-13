@@ -26,6 +26,11 @@
     }
 }
 
+.team__member-trigger {
+    display: inline;
+    cursor: pointer;
+}
+
 .team__member-name {
     display: inline-block;
     padding-left: rem(5px);
