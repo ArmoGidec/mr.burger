@@ -71,6 +71,7 @@
     }
 
     &--mobile {
+        display: none;
         @include phones {
             display: inline-block;
         }
