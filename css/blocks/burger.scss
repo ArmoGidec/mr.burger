@@ -1,0 +1,9 @@
+.burger {
+    display: flex;    
+}
+
+.burger__col {
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 0;
+}

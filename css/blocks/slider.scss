@@ -1,0 +1,25 @@
+.slider {
+    display: flex;
+    height: 100%;
+}
+
+.slider__btn {
+    background: none;
+    border: none;
+}
+
+.slider__btn--prev {
+    .slider__btn-icon {
+        transform: rotate(90deg);
+    }
+}
+
+.slider__btn--next {
+    .slider__btn-icon {
+        transform: rotate(-90deg);
+    }
+}
+
+.slider__slides {
+    flex: 1;
+}
