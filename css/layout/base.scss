@@ -91,6 +91,11 @@ html {
             border: solid rem(2px) $yellow;
         }
     }
+}
+
+.radio-wrap, .checkbox-wrap {
+    margin-top: rem(19px);
+    padding: 0 rem(10px);
     input[type=radio], input[type=checkbox] {
         position: absolute;
         visibility: hidden;
@@ -125,5 +130,11 @@ html {
         border-bottom: rem(3px) solid $dark-orange;
         box-sizing: border-box;
         transform: rotate(45deg) translateX(rem(3px)) translateY(rem(-3px));
+    }
+}
+
+.d-mobile-none {
+    @include phones {
+        display: none;
     }
 }

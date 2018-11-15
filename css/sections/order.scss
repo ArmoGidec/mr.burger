@@ -11,8 +11,6 @@
 
 .order__form {
     display: flex;
-    justify-content: center;
-    align-items: center;
     label {
         @include ubuntu(light);
         font-size: rem(14px);
@@ -20,7 +18,6 @@
 
     @include tablets {
         flex-direction: column;
-
     }
 }
 
@@ -39,5 +36,12 @@
 
 .order__row {
     display: flex;
-    justify-content: space-between;
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.order__btns {
+    margin-top: rem(19px);
+    padding: 0 rem(10px);
 }
