@@ -18,11 +18,5 @@
     align-items: center;
 }
 
-.btn-order {
-    @include tablets {
-        display: none;
-    }
-}
-
 @import './nav.scss';
 @import './menu-link.scss';

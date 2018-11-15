@@ -57,6 +57,10 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
     }
+
+    @include phones {
+        width: rem(30px);
+    }
 }
 
 .menu__trigger-text {
@@ -69,6 +73,10 @@
     left: 50%;
     top: 100%;
     margin-top: rem(-20px);
+
+    @include phones {
+        font-size: rem(30px);
+    }
 }
 
 .menu__item-description {

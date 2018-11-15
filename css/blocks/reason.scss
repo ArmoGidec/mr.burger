@@ -1,11 +1,28 @@
+.reason {
+    @include phones {
+        display: flex;
+    }
+}
+
 .reason__img-wrap {
     height: rem(90px);
     display: flex;
     margin-bottom: rem(33px);
+    @include phones {
+        width: 25%;
+    }
 }
 
 .reason__img {
     margin: auto;
+}
+
+.reason__text {
+    @include phones {
+        text-align: left;
+        width: 75%;
+        padding-left: 5%;
+    }
 }
 
 .reason__title {

@@ -20,6 +20,7 @@
 
     @include tablets {
         flex-direction: column;
+
     }
 }
 
@@ -27,8 +28,12 @@
     width: 50%;
 
     @include tablets {
-        width: 75%;
+        width: 100%;
+        padding: 0 15%;
+    }
 
+    @include phones {
+        padding: 0 5%;
     }
 }
 

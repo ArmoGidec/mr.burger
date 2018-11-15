@@ -1,5 +1,6 @@
 .menu-link {
     display: none;
+    padding-left: rem(30px);
     @include tablets {
         display: block;
     }

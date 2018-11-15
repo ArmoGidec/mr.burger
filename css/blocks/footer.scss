@@ -10,18 +10,27 @@
 
 .footer__container {
     flex-direction: row;
+    @include phones {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.footer__socials {
+    margin-bottom: 0;
+    align-items: flex-end;
 }
 
 .footer__info,
 .footer__socials {
-    width: 50%;
-}
-
-.footer__socials {
-    text-align: right;
-    margin-bottom: 0;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    @include phones {
+        width: 100%;
+        align-items: center;
+    }
 }
 
 .footer__address {
@@ -35,4 +44,8 @@
     @include ubuntu(bold);
     text-decoration: none;
     font-size: rem(14px);
+    
+    @include phones {
+        margin-bottom: 5%;
+    }
 }

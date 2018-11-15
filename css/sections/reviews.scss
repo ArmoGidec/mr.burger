@@ -25,27 +25,54 @@
     transition: 0.3s linear all;
 
     @include tablets {
-        padding: rem(30px) 54px 0 55px;
+        padding: rem(30px) rem(54px) 0 rem(55px);
         text-align: center;
+    }
+
+    @include phones {
+        padding: 15%;
     }
 }
 
-.reviews__reviewer:hover .reviews__review {
-    opacity: 1;
-    visibility: visible;
+.reviews__reviewer:hover, .reviews__reviewer:active{
+    .reviews__review {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .reviews__review-author {
     @include gagalin;
+    margin-bottom: rem(30px);
+
+    @include phones {
+        font-size: rem(24px);
+    }
 }
 
 .reviews__review-text {
     @include ubuntu(light);
     line-height: 1.71;
-    margin: rem(30px) 0 rem(17px) 0;
+    margin-bottom: rem(17px);
 
     @include tablets {
-        margin: rem(20px) 0 rem(27px) 0;
+        margin-bottom: rem(27px);
+    }
+
+    @include phones {
+        display: none;
     }
 }
 
+.reviews__review-link {
+    text-transform: uppercase;
+    @include phones {
+        display: none;
+    }
+
+    &--mobile {
+        @include phones {
+            display: inline-block;
+        }
+    }
+}

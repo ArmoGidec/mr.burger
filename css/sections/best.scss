@@ -12,6 +12,10 @@
     display: flex;
     text-align: center;
     margin-top: rem(55px);
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .best__list-item {
@@ -19,6 +23,14 @@
 
     &+.best__list-item {
         margin-left: rem(37px);
+
+        @include phones {
+            margin: 0;
+        }
+    }
+
+    @include phones {
+        width: 100%;
     }
 }
 
