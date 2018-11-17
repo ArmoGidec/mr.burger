@@ -1,22 +1,37 @@
 .slider {
     display: flex;
     height: 100%;
+    position: relative;
 }
 
 .slider__btn {
     background: none;
     border: none;
+
+    @include phones {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+    }
 }
 
 .slider__btn--prev {
     .slider__btn-icon {
         transform: rotate(90deg);
     }
+
+    @include phones {
+        left: 0;
+    }
 }
 
 .slider__btn--next {
     .slider__btn-icon {
         transform: rotate(-90deg);
+    }
+
+    @include phones {
+        right: 0;
     }
 }
 
