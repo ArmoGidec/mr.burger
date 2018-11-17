@@ -129,19 +129,31 @@
                         <div class="slider__slide">
                             <div class="burger">
                                 <div class="burger__col burger__visual">
-                                    <a href="#" class="butger__link">
-                                        <span class="burger__consist">Состав</span>
+                                    <a href="#" class="burger__consist">
+                                        <svg class="burger__consist-img" width="45.748px" height="44.625px" fill="#ffffff">
+                                            <use xlink:href="./sprite/sprite.svg#burger"></use>
+                                        </svg>
+                                        <div class="burger__consist-text">Состав</div>
                                     </a>
-                                    <img src="" alt="butger image" class="burger__img">
+                                    <img src="./images/black-burger.png" alt="burger image" class="burger__img">
                                     <div class="burger__calorie">
-                                        <span class="burger__calorie-text">ккал</span>
+                                        <div class="burger__calorie-wrap">
+                                            <svg class="burger__calorie-img" width="60px" height="60.178px" fill="#ffffff">
+                                                <use xlink:href="./sprite/sprite.svg#kkal"></use>
+                                            </svg>
+                                            <div class="burger__calorie-value">1200</div>
+                                        </div>
+                                        <div class="burger__calorie-text">ккал</div>
                                     </div>
                                 </div>
                                 <div class="burger__col burger__text">
                                     <div class="burger__name">Dark BEEF Burger</div>
-                                    <div class="burger__description">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
-                                    <div class="burger__price">500 рублей</div>
-                                    <a href="#" class="btn bg-dark-orange">Заказать</a>
+                                    <div class="burger__description">Ваш старый добрый знакомый, с рубленым бифштексом
+                                        из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                                    <div class="burger__price"><span>500</span><span class="burger__price-curency">
+                                            рублей</span></div>
+                                    <a href="#" class="btn bg-dark-orange burger__order">Заказать</a>
                                 </div>
                             </div>
                         </div>
@@ -411,7 +423,7 @@
                         </div>
                         <div class="order__row order__btns">
                             <button class="btn bg-dark-orange" type="submit">Заказать</button>
-                            <button class="btn bg-none ml-1" type="reset">Очистить</button>
+                            <button class="btn order__btn--clear bg-none" type="reset">Очистить</button>
                         </div>
                     </div>
                 </form>

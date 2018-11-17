@@ -65,7 +65,6 @@
 }
 
 .reviews__review-link {
-    text-transform: uppercase;
     @include phones {
         display: none;
     }

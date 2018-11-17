@@ -4,7 +4,7 @@
 }
 
 .menu__title {
-    color: white;
+    color: #fff;
     position: absolute;
     top: 10%;
     left: 10%;
@@ -29,7 +29,7 @@
 .menu__item-for {
     display: flex;
     max-height: 100%;
-    color: white;
+    color: #fff;
     &--active {
         .menu__item-trigger {
             color: $yellow;
@@ -45,7 +45,7 @@
 .menu__item-trigger {
     background: center center / auto 100% no-repeat;
     @include gagalin;
-    color: white;
+    color: #fff;
     text-decoration: none;
     width: rem(80px);
     height: 100%;

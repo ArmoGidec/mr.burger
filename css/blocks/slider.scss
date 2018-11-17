@@ -23,3 +23,10 @@
 .slider__slides {
     flex: 1;
 }
+
+.slider__slide {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

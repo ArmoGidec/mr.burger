@@ -46,6 +46,8 @@ html {
     background-color: $dark-grey;
     color: #fff;
     cursor: pointer;
+    text-transform: uppercase;
+    font-size: rem(13px);
 }
 
 .bg-none {

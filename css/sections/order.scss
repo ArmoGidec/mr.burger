@@ -44,4 +44,14 @@
 .order__btns {
     margin-top: rem(19px);
     padding: 0 rem(10px);
+    align-items: center;
+}
+
+.order__btn--clear {
+    text-transform: initial;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 0;
+    margin-left: 20px;
+    height: 100%;
 }
