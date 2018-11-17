@@ -44,6 +44,46 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    &:hover, &:active {
+        .burger__consist-list {
+            width: rem(270px);
+        }
+    }
+}
+
+.burger__consist-list {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: rgba(#fff, 0.9);
+    border-radius: 5px;
+    color: #000;
+    @include ubuntu(light);
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s linear all;
+}
+
+.burger__consist-item {
+    padding: 5% 10% 5% 0;
+    width: rem(270px);
+    display: flex;
+}
+
+.burger__consist-icon {
+    flex: 1;
+}
+
+.burger__consist-text {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+.burger__consist-name {
+    font-weight: bold;
 }
 
 .burger__img {
