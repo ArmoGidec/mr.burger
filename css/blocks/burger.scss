@@ -1,12 +1,20 @@
 .burger {
     display: flex;
     color: #fff;
+
+    @include tablets {
+        flex-wrap: wrap;
+    }
 }
 
 .burger__col {
     flex-shrink: 1;
     flex-grow: 1;
     flex-basis: 0;
+
+    @include tablets {
+        flex-basis: 100%
+    }
 }
 
 .burger__visual {
@@ -15,6 +23,7 @@
     font-size: rem(14px);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -50,6 +59,12 @@
     bottom: 0;
     opacity: 0.5;
     text-align: center;
+    @include tablets {
+        right: 0;
+        top: 0;
+        bottom: auto;
+        left: auto;
+    }
 }
 
 .burger__calorie-value {
@@ -63,11 +78,21 @@
     align-items: center;
 }
 
+.burger__text {
+    @include tablets {
+        text-align: center; 
+    }
+}
+
 .burger__name {
     @include gagalin;
     font-size: 72px;
     line-height: 0.89;
     padding-bottom: 10%;
+
+    @include tablets {
+        padding: 5%;
+    }
 }
 
 .burger__description {
