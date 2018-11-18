@@ -1,13 +1,25 @@
 .nav__list {
     display: flex;
+
     @include tablets {
         display: none;
     }
 }
 
 .nav__list-item {
-    &:last-child {
-        .nav__link::after {
+    display: flex;
+    align-items: center;
+    &::before {
+        content: "";
+        width: rem(4px);
+        height: rem(4px);
+        border-radius: 50%;
+        background: #fff;
+        margin: 0 rem(15px);
+    }
+
+    &:first-child {
+        &::before {
             display: none;
         }
     }
@@ -16,16 +28,4 @@
 .nav__link {
     color: #fff;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-  
-    &::after {
-      content: "";
-      display: block;
-      width: rem(4px);
-      height: rem(4px);
-      border-radius: 50%;
-      background: #fff;   
-      margin: 0 rem(15px);
-    }
-  }
+}
