@@ -13,28 +13,14 @@
 
 <body>
     <div class="wrap">
-        <div class="modal-menu">
-            <nav class="modal-nav">
-                <ul class="modal-nav__list">
-                    <li class="modal-nav__list-item"><a href="#" class="nav__link">О НАС</a></li>
-                    <li class="modal-nav__list-item"><a href="#" class="nav__link">БУРГЕРЫ</a></li>
-                    <li class="modal-nav__list-item"><a href="#" class="nav__link">КОМАНДА</a></li>
-                    <li class="modal-nav__list-item"><a href="#" class="nav__link">МЕНЮ</a></li>
-                    <li class="modal-nav__list-item"><a href="#" class="nav__link">ОТЗЫВЫ</a></li>
-                    <li class="modal-nav__list-item"><a href="#" class="nav__link">КАК МЫ РАБОТАЕМ</a></li>
-                    <li class="modal-nav__list-item"><a href="#" class="nav__link">КОНТАКТЫ</a></li>
-                </ul>
-            </nav>
-        </div>
-
         <section class="greeting section" id="greeting">
             <div class="container greeting__container">
                 <header class="header">
-                    <div class="logo">
+                    <a href="#" class="logo">
                         <svg class="logo__img" x="0px" y="0px" width="98.265px" height="74.317px">
                             <use xlink:href="./sprite/sprite.svg#logo"></use>
                         </svg>
-                    </div>
+                    </a>
                     <div class="header__btns">
                         <nav class="nav">
                             <ul class="nav__list">
@@ -49,7 +35,7 @@
                         </nav>
                         <div class="header__links">
                             <a href="#" class="btn bg-dark-orange btn-order">ЗАКАЗАТЬ</a>
-                            <a href="#" class="menu-link">
+                            <a href="#" class="menu-link" id="menu-link">
                                 <span class="menu-link__rect"></span>
                                 <span class="menu-link__rect"></span>
                                 <span class="menu-link__rect"></span>
@@ -560,6 +546,30 @@
             <li class="paginator__list-item"><a href="#contacts" class="paginator__link"></a></li>
         </ul>
     </div>
+
+    <div class="modal-menu" id="modal-menu">
+        <a href="#" class="modal-menu__logo">
+            <svg class="modal-menu__logo-icon" x="0px" y="0px">
+                <use xlink:href="./sprite/sprite.svg#logo"></use>
+            </svg>
+        </a>
+        <ul class="modal-menu__list">
+            <li class="modal-menu__elem"><a href="#best" class="modal-menu__link">О НАС</a></li>
+            <li class="modal-menu__elem"><a href="#burgers" class="modal-menu__link">БУРГЕРЫ</a></li>
+            <li class="modal-menu__elem"><a href="#team" class="modal-menu__link">КОМАНДА</a></li>
+            <li class="modal-menu__elem"><a href="#menu" class="modal-menu__link">МЕНЮ</a></li>
+            <li class="modal-menu__elem"><a href="#reviews" class="modal-menu__link">ОТЗЫВЫ</a></li>
+            <li class="modal-menu__elem"><a href="#how-work" class="modal-menu__link">КАК МЫ РАБОТАЕМ</a></li>
+            <li class="modal-menu__elem"><a href="#contacts" class="modal-menu__link">КОНТАКТЫ</a></li>
+        </ul>
+        <a href="#" class="modal-menu__close" id="modal-menu__close">
+            <svg class="modal-menu__close-icon">
+                <use xlink:href="./sprite/sprite.svg#close"></use>
+            </svg>
+        </a>
+    </div>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

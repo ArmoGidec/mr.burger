@@ -10,6 +10,12 @@ html {
     }
 }
 
+body {
+    &.modal-opened {
+        overflow-y: hidden;
+    }
+}
+
 .wrap {
     position: relative;
     min-height: 100%;
