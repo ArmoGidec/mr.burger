@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    /* modal menu handler */
+
     let menuLink = document.getElementById('menu-link');
     let menuClose = document.getElementById('modal-menu__close');
 
@@ -23,4 +26,14 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let link of document.querySelectorAll(".modal-menu .modal-menu__link")) {
         link.addEventListener('click', toggleMenu('close'));
     }
+
+    /* modal menu handler (END)*/
+
+
+    /* slider handler */
+
+    let bSlider = document.getElementById('burger-slider');
+    sliderInit(bSlider);
+
+    /* slider handler (END) */
 });
