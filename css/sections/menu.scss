@@ -34,10 +34,16 @@
     color: #fff;
     justify-content: flex-end;
     width: rem(80px);
+    transition: 0.3s all;
+    
     @include tablets {
         width: rem(65px);
     }
-    transition: 0.3s all;
+
+    @include phones {
+        width: rem(50px);
+    }
+
     &--active {
         width: 100%;
         .menu__item-trigger {
@@ -50,7 +56,6 @@
 
         @include phones {
             position: absolute;
-            left: 0;
             right: 0;
             top: 0;
             bottom: 0;
