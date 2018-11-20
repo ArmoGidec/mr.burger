@@ -8,6 +8,7 @@ const accordeon = (function() {
 
     /**
      * @param {string} selector 
+     * @param {string} activeClass
      */
     function init(itemsSelector, activeClass) {
         let items = document.querySelectorAll(itemsSelector);
