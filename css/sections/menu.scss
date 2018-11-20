@@ -14,16 +14,18 @@
     position: absolute;
     right: 0;
     height: 100%;
-    max-width: 50%;
+    left: 50%;
 
     @include tablets {
-        max-width: 100%;
+        left: 0;
     }
 }
 
 .menu__list {
     display: flex;
     height: 100%;
+    position: relative;
+    justify-content: flex-end;
 }
 
 .menu__item-for {
@@ -38,6 +40,15 @@
             width: 100%;
             overflow: auto;
             padding: rem(60px) rem(30px);
+        }
+
+        @include phones {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 100;
         }
     }
 }
@@ -59,7 +70,7 @@
     }
 
     @include phones {
-        width: rem(30px);
+        width: rem(50px);
     }
 }
 
