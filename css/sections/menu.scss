@@ -28,17 +28,22 @@
     justify-content: flex-end;
 }
 
-.menu__item-for {
+.menu__item {
     display: flex;
     max-height: 100%;
     color: #fff;
     justify-content: flex-end;
+    width: rem(80px);
+    @include tablets {
+        width: rem(65px);
+    }
+    transition: 0.3s all;
     &--active {
+        width: 100%;
         .menu__item-trigger {
             color: $yellow;
         }
         .menu__item-description {
-            width: 100%;
             overflow: auto;
             padding: rem(60px) rem(30px);
         }
@@ -95,11 +100,10 @@
 }
 
 .menu__item-description {
-    width: 0;
     overflow: hidden;
     background-color: rgba($dark-grey, 0.93);
     @include ubuntu(light);
     font-size: rem(14px);
     line-height: 1.8;
-    transition: 0.3s;
+    transition: 0.3s all;
 }

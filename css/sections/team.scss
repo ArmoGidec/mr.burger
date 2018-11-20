@@ -45,9 +45,8 @@
         }
     
         .team__member-desctiption {
-            display: flex;
+            transform: scaleY(1);
             height: 100%;
-    
             @include tablets {
                 padding-left: 0;
                 flex-direction: column;
@@ -68,11 +67,14 @@
 }
 
 .team__member-desctiption {
+    display: flex;
     @include ubuntu(light);
+    transform: scaleY(0);
     height: 0;
     overflow: hidden;
     padding-top: rem(17px);
     padding-left: rem(15px);
+    transition: 0.3s;
 }
 
 .team__member-avatar {

@@ -36,4 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
     sliderInit(bSlider);
 
     /* slider handler (END) */
+
+    /* accordeon handers */
+
+    let teamItems = accordeon('.team__list .team__member', 'team__member--active');
+    let menuItems = accordeon('.menu__list .menu__item', 'menu__item--active');
+    /* accordeon handers (END) */
 });

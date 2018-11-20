@@ -3,14 +3,12 @@ const sliderInit = (function () {
      * инициализация слайдера
      * @param {HTMLElement} element 
      */
-    let slidesElement, slides;
-
     function init(element) {
-        slidesElement = element.querySelector('.slider__slides');
+        let slidesElement = element.querySelector('.slider__slides');
         slidesElement.style.position = 'relative';
         slidesElement.style.overflow = 'hidden';
 
-        slides = element.querySelectorAll('.slider__slides .slider__slide');
+        let slides = element.querySelectorAll('.slider__slides .slider__slide');
         for (let i = 0, len = slides.length; i < len; i++) {
             let slide = slides[i];
 
@@ -20,14 +18,14 @@ const sliderInit = (function () {
             slide.style.transition = '0.3s';
         }
 
-        initSliderBtns(element);
+        initSliderBtns(element, slides);
     }
 
     /**
      * добавление обработчиков на кнопки слайдера
      * @param {HTMLElement} element 
      */
-    function initSliderBtns(element) {
+    function initSliderBtns(element, slides) {
         let prevBtn = element.querySelector('.slider__btn--prev');
         let nextBtn = element.querySelector('.slider__btn--next');
 
