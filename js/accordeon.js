@@ -1,6 +1,6 @@
 const accordeon = (function() {
     /**
-     * @callback animationCallback
+     * @callback callback
      * @param {Element} item
      */
 
@@ -8,13 +8,13 @@ const accordeon = (function() {
      * 
      * @param {Element} item 
      * @param {string} activeClass 
-     * @param {animationCallback} callback 
+     * @param {callback} func
      */
-    function toggleClass(item, activeClass, callback) {
+    function toggleClass(item, activeClass, func) {
         return function(e) {
             e.preventDefault();
-            if (typeof callback === 'function') {
-                callback.apply(this);
+            if (typeof func === 'function') {
+                func(item);
             }
             item.classList.toggle(`${activeClass}`);
         };
@@ -23,13 +23,13 @@ const accordeon = (function() {
     /**
      * @param {string} itemsSelector 
      * @param {string} activeClass
-     * @param {animationCallback} callbackfn
+     * @param {callback} func
      */
-    function init(itemsSelector, activeClass, callbackfn) {
+    function init(itemsSelector, activeClass, func) {
         let items = document.querySelectorAll(itemsSelector);
         for (let item of items) {
             let trigger = item.querySelector(`${itemsSelector}-trigger`);
-            trigger.addEventListener("click", toggleClass(item, activeClass, callbackfn));
+            trigger.addEventListener("click", toggleClass(item, activeClass, func));
         }
 
         return items;

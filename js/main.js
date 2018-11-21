@@ -38,9 +38,12 @@ document.addEventListener('DOMContentLoaded', function () {
     /* slider handler (END) */
 
     /* accordeon handers */
-    let teamItems = accordeon('.team__list .team__member', 'team__member--active', function() {
-        console.log(this);
+    let teamItems = accordeon('.team__list .team__member', 'team__member--active', item => {
+        let element = item.querySelector('.team__member-description');
+        let method = !item.classList.contains('team__member--active') ? 'expand' : 'collapse';
+        slideY[method](element);
     });
+
     let menuItems = accordeon('.menu__list .menu__item', 'menu__item--active');
     /* accordeon handers (END) */
 });
