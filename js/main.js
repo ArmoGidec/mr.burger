@@ -46,4 +46,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let menuItems = accordeon('.menu__list .menu__item', 'menu__item--active');
     /* accordeon handers (END) */
+
+    // init popup
+    let popup = topop(document.querySelector("#popup"));
+
+    /* order form handler */
+
+    let form = document.querySelector('.order form.order__form');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        let data = {};
+        for (let input of form.querySelectorAll("input, textarea")) {
+            data[input.name] = input.value;
+        }
+
+        fetch('https://webdev-api.loftschool.com/sendmail', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: new Headers({ 'Content-Type': 'application/json' })
+        }).then(response => response.json())
+            .then(value => {
+                let message = value.status === 1 || value.status === 0 ? value.message : null;
+                if (message) {
+                    popup.show(message);
+                }
+            })
+            .catch(reason => {
+                popup.show(reason.message);
+            });
+    });
+
+    /* order form handler (END) */
+
+    /* reviews handlers */
+    let modalReview = modal(document.querySelector("#modal-review"));
+
+    let author = "Константин Спилберг";
+
+    let bodyText = `Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. 
+                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.`;
+
+    function reviewHandler(e) {
+        e.preventDefault();
+
+        modalReview.show({header: author, body: bodyText});
+    }
+
+    for (let btn of document.querySelectorAll(".reviews__review-link")) {
+        btn.addEventListener('click', reviewHandler);
+    }
+    /* reviews handlers (END)*/
+
 });
