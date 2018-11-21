@@ -8,14 +8,27 @@ const accordeon = (function() {
      * 
      * @param {Element} item 
      * @param {string} activeClass 
+     * @param {NodeListOf<Element>} items
      * @param {callback} func
      */
-    function toggleClass(item, activeClass, func) {
+    function toggleClass(item, activeClass,items, func) {
         return function(e) {
             e.preventDefault();
+
+            // close another
+            for (let el of items) {
+                if (el !== item && el.classList.contains(`${activeClass}`)) {
+                    if (typeof func === 'function') {
+                        func(el);
+                    }
+                    el.classList.remove(`${activeClass}`);
+                }
+            }
+
             if (typeof func === 'function') {
                 func(item);
             }
+
             item.classList.toggle(`${activeClass}`);
         };
     }
@@ -29,7 +42,7 @@ const accordeon = (function() {
         let items = document.querySelectorAll(itemsSelector);
         for (let item of items) {
             let trigger = item.querySelector(`${itemsSelector}-trigger`);
-            trigger.addEventListener("click", toggleClass(item, activeClass, func));
+            trigger.addEventListener("click", toggleClass(item, activeClass, items, func));
         }
 
         return items;

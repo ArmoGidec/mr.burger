@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    /* modal menu handler */
+    /* modal page menu handler */
 
     let menuLink = document.getElementById('menu-link');
     let menuClose = document.getElementById('modal-menu__close');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', toggleMenu('close'));
     }
 
-    /* modal menu handler (END)*/
+    /* modal page menu handler (END)*/
 
 
     /* slider handler */
