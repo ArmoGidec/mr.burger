@@ -505,7 +505,7 @@
                             <i class="caret-down"></i>
                             <div class="team__member-name">Дэниэл Редклиф</div>
                         </div>
-                        <div class="team__member-desctiption">
+                        <div class="team__member-description">
                             <div class="team__member-avatar" style="background-image: url('./images/aphex.png');"></div>
                             <div class="team__member-text">
                                 <div class="team__member-post">Оператор</div>
@@ -519,7 +519,7 @@
                             <i class="caret-down"></i>
                             <div class="team__member-name">Ричард Джеймс</div>
                         </div>
-                        <div class="team__member-desctiption">
+                        <div class="team__member-description">
                             <div class="team__member-avatar" style="background-image: url('./images/aphex.png');"></div>
                             <div class="team__member-text">
                                 <div class="team__member-post">Оператор</div>
@@ -533,7 +533,7 @@
                             <i class="caret-down"></i>
                             <div class="team__member-name">Джейк Финн</div>
                         </div>
-                        <div class="team__member-desctiption">
+                        <div class="team__member-description">
                             <div class="team__member-avatar" style="background-image: url('./images/aphex.png');"></div>
                             <div class="team__member-text">
                                 <div class="team__member-post">Оператор</div>
@@ -547,7 +547,7 @@
                             <i class="caret-down"></i>
                             <div class="team__member-name">Николай Иванов</div>
                         </div>
-                        <div class="team__member-desctiption">
+                        <div class="team__member-description">
                             <div class="team__member-avatar" style="background-image: url('./images/aphex.png');"></div>
                             <div class="team__member-text">
                                 <div class="team__member-post">Оператор</div>
@@ -693,13 +693,14 @@
             <div class="container">
                 <div class="section-title order__title">Закажите доставку</div>
                 <form class="order__form text-white">
+                    <input type="email" name="to" hidden value="test@test.com">
                     <div class="order__col">
                         <div class="order__row">
                             <div class="input-wrap d-flex flex-direction-column">
-                                <label for="name">Имя</label><input type="text" name="name" id="name">
+                                <label for="name">Имя</label><input type="text" name="name" id="name" required>
                             </div>
                             <div class="input-wrap d-flex flex-direction-column">
-                                <label for="phone">Телефон</label><input type="text" name="phone" id="phone">
+                                <label for="phone">Телефон</label><input type="text" name="phone" id="phone" required>
                             </div>
                         </div>
                         <div class="order__row">
@@ -725,7 +726,7 @@
                     <div class="order__col">
                         <div class="order__row">
                             <div class="input-wrap d-flex flex-direction-column">
-                                <label for="comment">Комментарий</label><textarea name="comment" id="comment" rows="5"></textarea>
+                                <label for="comment">Комментарий</label><textarea name="comment" id="comment" rows="5" required></textarea>
                             </div>
                         </div>
                         <div class="order__row">
@@ -839,9 +840,42 @@
         </a>
     </div>
 
+<<<<<<< HEAD
     <script src="./js/jquery.min.js"></script>
+=======
+    <div class="popup" id="popup">
+        <div class="popup__wrapper">
+            <div class="popup__background"></div>
+            <div class="popup__content">
+                <div class="popup__text"></div>
+                <button class="btn bg-dark-orange popup__close">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-review">
+        <div class="modal__wrapper">
+            <div class="modal__background"></div>
+            <div class="modal__content">
+                <div class="modal__header">
+                    <div class="modal__header-text"></div>
+                    <button class="modal__close btn">
+                        <svg class="modal__close-icon">
+                            <use xlink:href="./sprite/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal__body"></div>
+            </div>
+        </div>
+    </div>
+
+>>>>>>> 8382b81fc1b06a14ec59698fb9a670c43fcca00b
     <script src="./js/slider.js"></script>
     <script src="./js/accordeon.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/main.js"></script>
     <script></script>
 </body>

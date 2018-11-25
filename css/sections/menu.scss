@@ -56,7 +56,6 @@
 
         @include phones {
             position: absolute;
-            right: 0;
             top: 0;
             bottom: 0;
             z-index: 100;
@@ -110,5 +109,5 @@
     @include ubuntu(light);
     font-size: rem(14px);
     line-height: 1.8;
-    transition: 0.3s all;
+    transition: 0.3s width;
 }
