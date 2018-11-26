@@ -1,56 +1,51 @@
-const sliderInit = (function () {
-    /**
-     * инициализация слайдера
-     * @param {HTMLElement} element 
-     */
-    function init(element) {
-        let slidesElement = element.querySelector('.slider__slides');
-        slidesElement.style.position = 'relative';
-        slidesElement.style.overflow = 'hidden';
+(function ($) {
 
-        let slides = element.querySelectorAll('.slider__slides .slider__slide');
-        for (let i = 0, len = slides.length; i < len; i++) {
-            let slide = slides[i];
+    function initSlider($element) {
+        $element.find('.slider__slides').css({
+            'position': 'relative',
+            'overflow': 'hidden'
+        });
 
-            slide.style.position = 'absolute';
-            slide.style.width = '100%';
-            slide.style.left = `${i * 100}%`;
-            slide.style.transition = '0.3s';
-        }
-
-        initSliderBtns(element, slides);
+        let $slides = $element.find(".slider__slide");
+        $slides.each(function (i) {
+            $(this).css({
+                'position': 'absolute',
+                'width': '100%',
+                'left': `${i * 100}%`
+            });
+        });
     }
 
-    /**
-     * добавление обработчиков на кнопки слайдера
-     * @param {HTMLElement} element 
-     */
-    function initSliderBtns(element, slides) {
-        let prevBtn = element.querySelector('.slider__btn--prev');
-        let nextBtn = element.querySelector('.slider__btn--next');
+    function initSliderBtns($element) {
+        let $prevBtn = $element.find('.slider__btn--prev');
+        let $nextBtn = $element.find('.slider__btn--next');
+
+        let $slides = $element.find(".slider__slide");
+        let count = 0, maxCount = $slides.length;
 
         const translateX = (direction) => {
-            for (let slide of slides) {
-                let position = parseInt(slide.style.left);
-                position += direction * 100;
-                slide.style.left = `${position}%`;
-            }
+            $slides.each(function (i) {
+                $(this).css('left', `${i * 100 - (count - direction) * 100}%`);
+            });
             return count - direction;
         };
 
-        let count = 0, maxCount = slides.length;
-        prevBtn.addEventListener('click', function () {
+        $prevBtn.on('click', function () {
             if (count > 0) {
                 count = translateX(1);
             }
         });
 
-        nextBtn.addEventListener('click', function () {
+        $nextBtn.on('click', function () {
             if (count < maxCount - 1) {
                 count = translateX(-1);
             }
         });
     }
 
-    return init;
-})();
+    $.fn.slider = function () {
+        initSlider(this);
+        initSliderBtns(this);
+        return this;
+    };
+})(jQuery);

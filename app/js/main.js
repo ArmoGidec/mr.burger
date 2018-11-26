@@ -32,8 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* slider handler */
 
-    let bSlider = document.getElementById('burger-slider');
-    sliderInit(bSlider);
+    $("#burger-slider").slider();
 
     /* slider handler (END) */
 
