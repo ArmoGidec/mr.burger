@@ -1,0 +1,8 @@
+@keyframes animateHeight {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 100%;
+  }
+}
