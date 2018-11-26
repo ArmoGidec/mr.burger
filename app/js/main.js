@@ -51,18 +51,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* order form handler */
 
-    let form = document.querySelector('.order form.order__form');
-
-    form.addEventListener('submit', function (e) {
+    $('.order form.order__form').on('submit', function (e) {
         e.preventDefault();
-
+        $that = $(this);
         let data = {};
-        for (let input of form.querySelectorAll("input, textarea")) {
+        for (let input of $that.find("input, textarea")) {
             data[input.name] = input.value;
         }
 
-        fetch('https://webdev-api.loftschool.com/sendmail', {
-            method: 'POST',
+        fetch($that.attr('action'), {
+            method: $that.attr('method'),
             body: JSON.stringify(data),
             headers: new Headers({ 'Content-Type': 'application/json' })
         }).then(response => response.json())
