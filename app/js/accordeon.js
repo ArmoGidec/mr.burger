@@ -50,3 +50,10 @@ const accordeon = (function() {
 
     return init;
 })();
+
+(function($) {
+    $.fn.accordeon = function() {
+        return this;
+    };
+
+})(jQuery);
