@@ -50,6 +50,11 @@ $(document).ready(function () {
     // init popup
     // let popup = topop(document.querySelector("#popup"));
 
+    $(".team__list").accordeon({
+        direction: 'vertival',
+        trigger: '.team__member-trigger'
+    });
+
     /* order form handler */
 
     $('.order form.order__form').on('submit', function (e) {
