@@ -52,7 +52,13 @@ const accordeon = (function() {
 })();
 
 (function($) {
-    $.fn.accordeon = function() {
+    $.fn.accordeon = function(options = {
+        direction: 'horizontal',
+        subjectSelector: "subject", 
+        triggerSellector: "trigger",
+    }) {
+        let subject = this.find(subjectSelector);
+        this.find(triggerSellector).on('click', slide);
         return this;
     };
 
