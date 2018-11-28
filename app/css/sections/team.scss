@@ -31,22 +31,22 @@
 }
 
 .team__member {
-    height: rem(13px);
-    overflow: hidden;
     &+.team__member {
         margin-top: rem(39px);
     }
 
     &--active {
-        height: auto;
-        overflow: visible;
-
         .caret-down {
             transform: rotate(180deg);
         }
-    
+
         .team__member-name {
             color: $yellow;
+        }
+
+        .team__member-description {
+            height: auto;
+            overflow: visible;
         }
     }
 }
@@ -63,6 +63,9 @@
 
 .team__member-description {
     display: flex;
+    height: 0;
+    overflow: hidden;
+
     @include ubuntu(light);
     overflow: hidden;
     padding-top: rem(17px);

@@ -45,15 +45,14 @@ $(document).ready(function () {
 
     // let menuItems = accordeon('.menu__list .menu__item', 'menu__item--active');
 
+    $(".team__list").accordeon({
+        activeClass: 'team__member--active'
+    });
+
     /* accordeon handers (END) */
 
     // init popup
     // let popup = topop(document.querySelector("#popup"));
-
-    $(".team__list").accordeon({
-        direction: 'vertival',
-        trigger: '.team__member-trigger'
-    });
 
     /* order form handler */
 
