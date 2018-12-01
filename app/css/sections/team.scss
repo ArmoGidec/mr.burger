@@ -43,11 +43,6 @@
         .team__member-name {
             color: $yellow;
         }
-
-        .team__member-description {
-            height: auto;
-            overflow: visible;
-        }
     }
 }
 
@@ -63,8 +58,6 @@
 
 .team__member-description {
     display: flex;
-    height: 0;
-    overflow: hidden;
 
     @include ubuntu(light);
     overflow: hidden;

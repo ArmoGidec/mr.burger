@@ -1,11 +1,11 @@
 import "./vendors/jquery.min.js";
 import "./modules/slider.js";
-import "./modules/accordeon.js";
+import { accordeon } from "./modules/accordeon.js";
 
 $(document).ready(function () {
 
     /* modal page menu handler */
-    
+
     function toggleMenu(action = 'show', options = {
         cancelEvent: false,
     }) {
@@ -37,16 +37,18 @@ $(document).ready(function () {
 
     /* accordeon handers */
 
-    // let teamItems = accordeon('.team__list .team__member', 'team__member--active', item => {
-    //     let element = item.querySelector('.team__member-description');
-    //     let method = !item.classList.contains('team__member--active') ? 'expand' : 'collapse';
-    //     slideY[method](element);
-    // });
-
-    // let menuItems = accordeon('.menu__list .menu__item', 'menu__item--active');
+    $(".menu__list").accordeon( {
+        itemSelector: '.menu__item',
+        activeClass: "menu__item--active",
+        triggerSelector: '.menu__item-trigger'
+    });
 
     $(".team__list").accordeon({
-        activeClass: 'team__member--active'
+        itemSelector: '.team__member',
+        activeClass: 'team__member--active',
+        func: $item => {
+            $item.next(".team__member-description").slideToggle();
+        }
     });
 
     /* accordeon handers (END) */
