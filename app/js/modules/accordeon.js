@@ -55,9 +55,8 @@ const accordeon = (function() {
 
     function slide(direction) {
         return function(e) {
-            console.log("test");
             e.preventDefault();
-
+            console.log($(this).parent());
         };
     }
 
@@ -65,7 +64,8 @@ const accordeon = (function() {
         direction: 'horizontal',
         trigger: "accordeon-trigger",
     }) {
-        this.find(options.trigger).on('click', slide(options.direction));
+        let $trigger = this.find(options.trigger);
+        $trigger.on('click', slide(options.direction));
         return this;
     };
 
