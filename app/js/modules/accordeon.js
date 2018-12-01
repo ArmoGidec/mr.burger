@@ -1,4 +1,4 @@
-const accordeon = (function() {
+const accordeon = (function () {
     /**
      * @callback callback
      * @param {Element} item
@@ -11,8 +11,8 @@ const accordeon = (function() {
      * @param {NodeListOf<Element>} items
      * @param {callback} func
      */
-    function toggleClass(item, activeClass,items, func) {
-        return function(e) {
+    function toggleClass(item, activeClass, items, func) {
+        return function (e) {
             e.preventDefault();
 
             // close another
@@ -51,7 +51,7 @@ const accordeon = (function() {
     return init;
 })();
 
-(function($) {
+(function ($) {
 
     function slide(direction) {
         return function(e) {
@@ -60,9 +60,19 @@ const accordeon = (function() {
         };
     }
 
-    $.fn.accordeon = function(options = {
-        direction: 'horizontal',
-        trigger: "accordeon-trigger",
+    function init({
+        triggerSelector = '.acc__head',
+        activeClass = 'acc__active',
+        func = () => {}
+    }) {
+        let $trigger = $(triggerSelector);
+        $trigger.on('click', toggleClass(activeClass, func));
+    }
+
+    $.fn.accordeon = function (options = {
+        triggerSelector : 'acc__head',
+        activeClass : 'acc__active',
+        func: () => {}
     }) {
         let $trigger = this.find(options.trigger);
         $trigger.on('click', slide(options.direction));
