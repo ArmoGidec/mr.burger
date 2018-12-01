@@ -1,0 +1,25 @@
+{
+  "name": "burgers",
+  "version": "1.0.0",
+  "description": "loftschool. 2й курс.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArmoGidec/mr.burger.git"
+  },
+  "author": "Ildar \"diatomiccoder\" Gataullin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArmoGidec/mr.burger/issues"
+  },
+  "homepage": "https://github.com/ArmoGidec/mr.burger#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
