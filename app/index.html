@@ -8,7 +8,7 @@
     <title>Mr. Burger</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
@@ -47,7 +47,9 @@
                     <div class="greeting__images">
                         <img src="./images/steam+(2).png" class="greeting__img">
                         <div class="greeting__drops">
-                            <img src="./icons/drops.svg" class="greeting__img">
+                            <svg class="logo__img" x="0px" y="0px" width="450.527px" height="241.369px">
+                                <use xlink:href="./sprite/sprite.svg#drops"></use>
+                            </svg>
                         </div>
                     </div>
                     <div class="greeting__text">
@@ -623,7 +625,7 @@
         </section>
 
         <section class="reviews section" id=reviews>
-            <div class="reviews__reviewer text-white" style="background-image: url('./photos/photo-1.png')">
+            <div class="reviews__reviewer text-white" style="background-image: url('./images/photos/photo-1.png')">
                 <div class="reviews__review">
                     <div class="reviews__review-author">Константин Спилберг</div>
                     <div class="reviews__review-text">Мысли все о них и о них, о них и о них. Нельзя устоять,
@@ -633,7 +635,7 @@
                     <a href="#" class="reviews__review-link reviews__review-link--mobile btn bg-dark-grey">Читать отзыв</a>
                 </div>
             </div>
-            <div class="reviews__reviewer text-white" style="background-image: url('./photos/photo-2.png')">
+            <div class="reviews__reviewer text-white" style="background-image: url('./images/photos/photo-2.png')">
                 <div class="reviews__review">
                     <div class="reviews__review-author">Константин Спилберг</div>
                     <div class="reviews__review-text">Мысли все о них и о них, о них и о них. Нельзя устоять,
@@ -643,7 +645,7 @@
                     <a href="#" class="reviews__review-link reviews__review-link--mobile btn bg-dark-grey">Читать отзыв</a>
                 </div>
             </div>
-            <div class="reviews__reviewer text-white" style="background-image: url('./photos/photo-3.png')">
+            <div class="reviews__reviewer text-white" style="background-image: url('./images/photos/photo-3.png')">
                 <div class="reviews__review">
                     <div class="reviews__review-author">Константин Спилберг</div>
                     <div class="reviews__review-text">Мысли все о них и о них, о них и о них. Нельзя устоять,
@@ -653,7 +655,7 @@
                     <a href="#" class="reviews__review-link reviews__review-link--mobile btn bg-dark-grey">Читать отзыв</a>
                 </div>
             </div>
-            <div class="reviews__reviewer text-white" style="background-image: url('./photos/photo-4.png');">
+            <div class="reviews__reviewer text-white" style="background-image: url('./images/photos/photo-4.png');">
                 <div class="reviews__review">
                     <div class="reviews__review-author">Константин Спилберг</div>
                     <div class="reviews__review-text">Мысли все о них и о них, о них и о них. Нельзя устоять,
@@ -663,7 +665,7 @@
                     <a href="#" class="reviews__review-link reviews__review-link--mobile btn bg-dark-grey">Читать отзыв</a>
                 </div>
             </div>
-            <div class="reviews__reviewer text-white" style="background-image: url('./photos/photo-5.png');">
+            <div class="reviews__reviewer text-white" style="background-image: url('./images/photos/photo-5.png');">
                 <div class="reviews__review">
                     <div class="reviews__review-author">Константин Спилберг</div>
                     <div class="reviews__review-text">Мысли все о них и о них, о них и о них. Нельзя устоять,
@@ -672,7 +674,7 @@
                     <a href="#" class="reviews__review-link btn bg-dark-grey text-white">Подробнее</a>
                 </div>
             </div>
-            <div class="reviews__reviewer text-white" style="background-image: url('./photos/photo-6.png');">
+            <div class="reviews__reviewer text-white" style="background-image: url('./images/photos/photo-6.png');">
                 <div class="reviews__review">
                     <div class="reviews__review-author">Константин Спилберг</div>
                     <div class="reviews__review-text">Мысли все о них и о них, о них и о них. Нельзя устоять,
@@ -681,7 +683,7 @@
                     <a href="#" class="reviews__review-link btn bg-dark-grey text-white">Подробнее</a>
                 </div>
             </div>
-            <div class="reviews__reviewer text-white" style="background-image: url('./photos/photo-7.png');">
+            <div class="reviews__reviewer text-white" style="background-image: url('./images/photos/photo-7.png');">
                 <div class="reviews__review">
                     <div class="reviews__review-author">Константин Спилберг</div>
                     <div class="reviews__review-text">Мысли все о них и о них, о них и о них. Нельзя устоять,
@@ -690,7 +692,7 @@
                     <a href="#" class="reviews__review-link btn bg-dark-grey text-white">Подробнее</a>
                 </div>
             </div>
-            <div class="reviews__reviewer text-white" style="background-image: url('./photos/photo-8.png');">
+            <div class="reviews__reviewer text-white" style="background-image: url('./images/photos/photo-8.png');">
                 <div class="reviews__review">
                     <div class="reviews__review-author">Константин Спилберг</div>
                     <div class="reviews__review-text">Мысли все о них и о них, о них и о них. Нельзя устоять,
@@ -880,7 +882,8 @@
         </div>
     </div>
 
-    <script type="module" src="./js/main.mjs"></script>
+    <script src="./js/vendors.min.js"></script>
+    <script src="./js/script.min.js"></script>
 </body>
 
 </html>

@@ -1,7 +1,3 @@
-import "./vendors/jquery.min.js";
-import "./modules/slider.js";
-import { accordeon } from "./modules/accordeon.js";
-
 $(document).ready(function () {
 
     /* modal page menu handler */

@@ -1,4 +1,4 @@
-export const slideY = (function () {
+const slideY = (function () {
 
     /**
      * @param {Element} element 
