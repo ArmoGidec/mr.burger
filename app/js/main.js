@@ -105,7 +105,7 @@ $(document).ready(function () {
             // scroll down
             count += 1;
             $("html, body").animate({ scrollTop: count * pageHeight});
-        } else if (( e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1) ) && count > 0) {
+        } else if (( e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1) ) > 0 && count > 0) {
             // scroll up
             count -= 1;
             $("html, body").animate({ scrollTop: count * pageHeight});
