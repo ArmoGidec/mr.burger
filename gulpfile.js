@@ -68,6 +68,7 @@ function scripts() {
 
 function scriptsVendors() {
     return src(['node_modules/jquery/dist/jquery.js', 'app/js/modules/*.js'])
+        .pipe(plumber())
         .pipe(babel({
             presets: ['env']
         }))

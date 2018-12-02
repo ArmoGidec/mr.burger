@@ -1,65 +1,47 @@
-const topop = (function () {
+(function($) {
 
-    /**
-     * @param {Element} element 
-     */
-    function init(element) {
+    $.fn.popup = function(command = 'init', value = null) {
+        let $that = this;
+        let $textBlock = this.find(".popup__text");
 
-        let obj = {};
-        let textBlock = element.querySelector(".popup__text");
+        const commands = {
+            show: function(text) {
+                if (text && typeof text === 'string') {
+                    this.setText(text);
+                }
 
-        /**
-         * @param {string} text 
-         */
-        const show = text => {
-            if (text && typeof text === 'string') {
-                setText(text);
+                $that.addClass("popup--show");
+                $("body").addClass("modal-opened");
+                return $that;
+            },
+            close: function() {
+                $that.removeClass('popup--show');
+                $("body").removeClass('modal-opened');
+
+                let transitionDuration = parseInt($that.css('transition-duration') || 300);
+                setTimeout(this.clearText, transitionDuration);
+                return $that;
+            },
+            setText: function(text) {
+                if (typeof text === 'string') {
+                    $textBlock.text(text);
+                }
+                return $that;
+            },
+            clearText: function() {
+                $textBlock.text('');
+                return $that;
             }
-
-            element.classList.add('popup--show');
-            document.body.classList.add('modal-opened');
-            return obj;
         };
 
-        const close = () => {
-            element.classList.remove('popup--show');
-            document.body.classList.remove('modal-opened');
-            let transitionDuration = parseInt(element.style.transitionDuration) || 300;
-            
-            setTimeout(clearText, transitionDuration);
-            return obj;
-        };
+        $that.find(".popup__close, .popup__background")
+            .on('click', commands.close);
 
-        let closeBtn = element.querySelector(".popup__close");
-
-        if (closeBtn) {
-            closeBtn.addEventListener('click', close);
+        if (typeof command === 'function') {
+            commands[command](value);
         }
 
-        let backgroundBlock = element.querySelector('.popup__background');
-        if (backgroundBlock) {
-            backgroundBlock.addEventListener('click', close);
-        }
+        return this;
+    };
 
-        const clearText = () => {
-            textBlock.textContent = '';
-            return obj;
-        };
-
-        /**
-         * @param {string} text 
-         */
-        const setText = (text) => {
-            if (typeof text === 'string') {
-                textBlock.textContent = text;
-            }
-            return obj;
-        };
-
-        obj = { element, setText, clearText, show, close };
-
-        return obj;
-    }
-
-    return init;
-})();
+})(jQuery);
