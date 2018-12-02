@@ -97,14 +97,15 @@ $(document).ready(function () {
     let count = $("html, body").scrollTop() / $(window).height(),
         maxCount = $("body .wrap>section").length;
 
-    $("body .wrap").on('wheel', function(e) {
+
+    $("body .wrap").bind('DOMMouseScroll mousewheel', function(e) {
         let pageHeight = $(window).height();
 
-        if (e.originalEvent.wheelDeltaY < 0 && count < (maxCount - 1)) {
+        if (( e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1) ) < 0 && count < (maxCount - 1)) {
             // scroll down
             count += 1;
             $("html, body").animate({ scrollTop: count * pageHeight});
-        } else if (e.originalEvent.wheelDeltaY > 0 && count > 0) {
+        } else if (( e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1) ) && count > 0) {
             // scroll up
             count -= 1;
             $("html, body").animate({ scrollTop: count * pageHeight});
