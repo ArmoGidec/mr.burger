@@ -81,24 +81,28 @@ $(document).ready(function () {
     /* order form handler (END) */
 
     /* reviews handlers */
-    // let modalReview = modal(document.querySelector("#modal-review"));
+    let modalReview = modal(document.querySelector("#modal-review"));
 
-    // let author = "Константин Спилберг";
+    let author = "Константин Спилберг";
 
-    // let bodyText = `Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-    //                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. 
-    //                 Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-    //                 Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.`;
+    let bodyText = `Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. 
+                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.`;
 
-    // function reviewHandler(e) {
-    //     e.preventDefault();
+    function reviewHandler(e) {
+        e.preventDefault();
 
-    //     modalReview.show({header: author, body: bodyText});
-    // }
+        modalReview.show({header: author, body: bodyText});
+    }
 
-    // for (let btn of document.querySelectorAll(".reviews__review-link")) {
-    //     btn.addEventListener('click', reviewHandler);
-    // }
+    for (let btn of document.querySelectorAll(".reviews__review-link")) {
+        btn.addEventListener('click', reviewHandler);
+    }
     /* reviews handlers (END)*/
+
+    $("body .wrap").pageSlider({
+        item: "section"
+    });
 
 });
