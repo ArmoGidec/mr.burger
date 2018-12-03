@@ -95,20 +95,32 @@ $(document).ready(function () {
     /* page slider */
 
     let count = $("html, body").scrollTop() / $(window).height(),
-        maxCount = $("body .wrap>section").length;
+        maxCount = $("body .wrap>section").length,
+        inScroll = false;
+
+    const mouseInertionIsFinished = 300;
+    const transitionTime = 400;
 
 
     $("body .wrap").bind('DOMMouseScroll mousewheel', function(e) {
-        let pageHeight = $(window).height();
+        e.preventDefault();
+        if (!inScroll) {
+            inScroll = true;
+            let pageHeight = $(window).height();
+    
+            if (( e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1) ) < 0 && count < (maxCount - 1)) {
+                // scroll down
+                count += 1;
+                $("html, body").animate({ scrollTop: count * pageHeight}, transitionTime);
+            } else if (( e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1) ) > 0 && count > 0) {
+                // scroll up
+                count -= 1;
+                $("html, body").animate({ scrollTop: count * pageHeight}, transitionTime);
+            }
 
-        if (( e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1) ) < 0 && count < (maxCount - 1)) {
-            // scroll down
-            count += 1;
-            $("html, body").animate({ scrollTop: count * pageHeight});
-        } else if (( e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1) ) > 0 && count > 0) {
-            // scroll up
-            count -= 1;
-            $("html, body").animate({ scrollTop: count * pageHeight});
+            setTimeout(() => {
+                inScroll = false;
+            }, transitionTime + mouseInertionIsFinished);
         }
     });
 

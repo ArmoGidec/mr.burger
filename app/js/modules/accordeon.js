@@ -1,13 +1,12 @@
 (function ($) {
 
     function slideBody(triggerSelector, itemSelector, activeClass, func) {
-        let $that = this;
         return function (e) {
             e.preventDefault();
 
             let $parent = $(this).parent(itemSelector);
 
-            let $another = $that.find(`.${activeClass}`).not($parent);
+            let $another = $parent.siblings();
             $another.removeClass(activeClass);
 
             if (typeof func === "function") {
@@ -31,7 +30,7 @@
         activeClass = 'acc__item--active'
     }) {
         init.apply(this, [subjectSelector]);
-        this.find(triggerSelector).on('click', slideBody.apply(this, [triggerSelector, itemSelector, activeClass, func]));
+        this.find(triggerSelector).on('click', slideBody(triggerSelector, itemSelector, activeClass, func));
         return this;
     };
 

@@ -104,7 +104,8 @@ function clean() {
 
 function watcher() {
     watch('app/css/**/*.scss', styles);
-    watch('app/js/**/*.js', scripts);
+    watch('app/js/*.js', scripts);
+    watch('app/js/modules/*js', scriptsVendors);
     watch('app/*.html', copyHtml);
 }
 

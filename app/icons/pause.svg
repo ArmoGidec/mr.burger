@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="pause" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300" xml:space="preserve">
+<g>
+	<rect width="50" height="140" x="90" y="80" rx="5" ry="5" />
+	<rect width="50" height="140" x="160" y="80" rx="5" ry="5" />
+</g>
+</svg>
