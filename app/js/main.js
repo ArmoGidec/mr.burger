@@ -44,8 +44,6 @@ $(document).ready(function () {
 
     /* accordeon handers (END) */
 
-    // init popup
-
     /* order form handler */
 
     $('.order form.order__form').on('submit', function (e) {
@@ -121,8 +119,6 @@ $(document).ready(function () {
         }
     });
 
-    /* page slider handler (END) */
-
     $("section.section").viewport().on('inview', function(_, $element) {
         $("section.active-section").removeClass("active-section");
         $element.addClass("active-section");
@@ -132,5 +128,7 @@ $(document).ready(function () {
             return $(this).find('a').attr('href') === `#${id}`;
         }).addClass('active');
     }).scroll();
+
+    /* page slider handler (END) */
 
 });
