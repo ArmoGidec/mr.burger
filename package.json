@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/ArmoGidec/mr.burger#readme",
   "dependencies": {
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "jquery-mousewheel": "^3.1.13"
   },
   "devDependencies": {
     "autoprefixer": "^8.5.1",

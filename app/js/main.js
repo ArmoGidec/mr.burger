@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     /* modal page menu handler */
 
     function toggleMenu(action = 'show', options = {
@@ -94,28 +93,26 @@ $(document).ready(function () {
 
     /* page slider handler */
 
-    let count = $("html, body").scrollTop() / $(window).height(),
-        maxCount = $("body .wrap>section").length,
-        inScroll = false;
+    let inScroll = false;
 
     const mouseInertionIsFinished = 300;
     const transitionTime = 400;
 
 
-    $("body .wrap").bind('DOMMouseScroll mousewheel', function (e) {
+    $("body .wrap").bind('mousewheel', function (e) {
         e.preventDefault();
         if (!inScroll) {
             inScroll = true;
-            let pageHeight = $(window).height();
+            let $active = $("section.active-section");
+            let $nextSection = $active.next("section");
+            let $prevSection = $active.prev("section");
 
-            if ((e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1)) < 0 && count < (maxCount - 1)) {
+            if ((e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1)) < 0 && $nextSection.length) {
                 // scroll down
-                count += 1;
-                $("html, body").animate({ scrollTop: count * pageHeight }, transitionTime);
-            } else if ((e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1)) > 0 && count > 0) {
+                $("html, body").animate({ scrollTop: $nextSection.offset().top }, transitionTime);
+            } else if ((e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1)) > 0 && $prevSection.length) {
                 // scroll up
-                count -= 1;
-                $("html, body").animate({ scrollTop: count * pageHeight }, transitionTime);
+                $("html, body").animate({ scrollTop: $prevSection.offset().top }, transitionTime);
             }
 
             setTimeout(() => {
@@ -125,5 +122,15 @@ $(document).ready(function () {
     });
 
     /* page slider handler (END) */
+
+    $("section.section").viewport().on('inview', function(_, $element) {
+        $("section.active-section").removeClass("active-section");
+        $element.addClass("active-section");
+
+        let id = $element.attr('id');
+        $(".paginator__list-item").removeClass("active").filter(function() {
+            return $(this).find('a').attr('href') === `#${id}`;
+        }).addClass('active');
+    }).scroll();
 
 });
