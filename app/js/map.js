@@ -24,8 +24,6 @@ $(document).ready(function () {
         myMap.behaviors.disable('scrollZoom');
 
         let randomCoordinatesArray = [...Array(4)].map(getRandomCoordinate);
-        console.log(randomCoordinatesArray);
-        
 
         randomCoordinatesArray.forEach(coordinates => {
             let placemark = new ymaps.Placemark(coordinates, { hintContent: 'Mr.Burger' }, {
