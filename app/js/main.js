@@ -99,7 +99,7 @@ $(document).ready(function () {
     const transitionTime = 400;
 
 
-    $("body .wrap").bind('mousewheel', function (e) {
+    $(window).on('mousewheel', function (e) {
         e.preventDefault();
         if (!inScroll) {
             inScroll = true;
@@ -107,10 +107,10 @@ $(document).ready(function () {
             let $nextSection = $active.next("section");
             let $prevSection = $active.prev("section");
 
-            if ((e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1)) < 0 && $nextSection.length) {
+            if (e.deltaY < 0 && $nextSection.length) {
                 // scroll down
                 $("html, body").animate({ scrollTop: $nextSection.offset().top }, transitionTime);
-            } else if ((e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1)) > 0 && $prevSection.length) {
+            } else if (e.deltaY > 0 && $prevSection.length) {
                 // scroll up
                 $("html, body").animate({ scrollTop: $prevSection.offset().top }, transitionTime);
             }

@@ -75,6 +75,7 @@ function scripts() {
 function scriptsVendors() {
     return src([
             'node_modules/jquery/dist/jquery.js',
+            'node_modules/jquery-mousewheel/jquery.mousewheel.js',
             'app/js/modules/*.js'
         ])
         .pipe(plumber())
