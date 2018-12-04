@@ -34,27 +34,24 @@ const onYouTubeIframeAPIReady = (function () {
         }, 1000);
     }
 
-    function togglePlayerDisplay() {
+    function togglePlayerDisplay(event) {
         
-
         // -1 – воспроизведение видео не началось
         // 0 – воспроизведение видео завершено
         // 1 – воспроизведение
         // 2 – пауза
         // 3 – буферизация
         // 5 – видео находится в очереди
-        const playerStatus = player.getPlayerState();
 
-        let { controls, playerBlock } = playerStatus !== 1 ? {
-            controls: 'addClass',
-            playerBlock: 'removeClass'
-        } : {
-                controls: 'removeClass',
-                playerBlock: 'addClass'
-            };
-
-        $(".player__controls")[controls]("player__controls--show");
-        $(".player")[playerBlock]("player--active");
+        switch (event.data) {
+            case 1:
+                $(".player").addClass("player--active");
+                $(".player__splash-screen").hide();
+                break;
+            case 2:
+                $(".player").removeClass("player--active");
+                break;
+        }
     }
 
     $(".player__btn").on('click', e => {
@@ -89,6 +86,13 @@ const onYouTubeIframeAPIReady = (function () {
             player.setVolume(percent);
         })
     );
+
+    $('.player__volume-btn').on('click', function() {
+        // let volume = player.isMuted() ? 100 : 0;
+        // player.setVolume(volume);
+        
+        // changeCirclePossition($(".player__volume-scale .player__scale-circle"), volume);
+    });
 
     function changeCirclePossition($item, percent, func) {
         $item.css({

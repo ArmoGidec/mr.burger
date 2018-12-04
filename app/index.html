@@ -712,7 +712,7 @@
                         <div id="yt-player"></div>
                         <div class="player__splash-screen"></div>
                     </div>
-                    <div class="player__controls player__controls--show">
+                    <div class="player__controls">
                         <div class="player__screen-btns">
                             <button class="player__start player__btn">
                                 <svg class="player__btn-icon">
@@ -743,7 +743,7 @@
                                 <div class="player__scale-circle"></div>
                             </div>
                             <div class="player__volume">
-                                <div class="player__volume-btn">
+                                <div class="player__volume-btn player__btn" disabled>
                                     <svg class="player__btn-icon" height="35px" width="50px" style="fill: #626262;">
                                         <use xlink:href="./sprite/sprite.svg#volume"></use>
                                     </svg>
@@ -939,6 +939,7 @@
         </div>
     </div>
 
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="./js/vendors.min.js"></script>
     <script src="./js/script.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>

@@ -5,16 +5,16 @@ $dark: #626262;
     position: relative;
 
     &--active {
-        .player__splash-screen {
-            display: none;
-        }
-
         .player__pause {
             display: block;
         }
 
         .player__start {
             display: none;
+        }
+
+        .player__controls {
+            opacity: 0;
         }
     }
 }
@@ -39,10 +39,9 @@ $dark: #626262;
     height: 100%;
     flex-direction: column;
     display: flex;
-    opacity: 0;
     transition: 0.6s 4s linear opacity;
 
-    &--show, &:hover {
+    &:hover {
         opacity: 1;
         transition-delay: 0s;
     }
@@ -84,6 +83,7 @@ $dark: #626262;
 .player__scale {
     position: relative;
     cursor: pointer;
+    padding: 4px 0;
 
     &-line {
         width: 100%;
@@ -98,7 +98,7 @@ $dark: #626262;
         border-radius: 50%;
         background-color: $dark;
         position: absolute;
-        top: rem(-4px);
+        top: 0;
         right: 0;
     }
 }

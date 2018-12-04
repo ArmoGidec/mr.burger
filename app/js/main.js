@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     /* accordeon handers */
 
-    $(".menu__list").accordeon( {
+    $(".menu__list").accordeon({
         itemSelector: '.menu__item',
         activeClass: "menu__item--active",
         triggerSelector: '.menu__item-trigger'
@@ -84,7 +84,7 @@ $(document).ready(function () {
                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                     Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.`;
 
-    $(".reviews__review-link").on('click', function(e) {
+    $(".reviews__review-link").on('click', function (e) {
         e.preventDefault();
         // modalReview.show({header: author, body: bodyText});
         $("#modal-review").modal('show', { header: author, body: bodyText });
@@ -92,7 +92,7 @@ $(document).ready(function () {
 
     /* reviews handlers (END)*/
 
-    /* page slider */
+    /* page slider handler */
 
     let count = $("html, body").scrollTop() / $(window).height(),
         maxCount = $("body .wrap>section").length,
@@ -102,20 +102,20 @@ $(document).ready(function () {
     const transitionTime = 400;
 
 
-    $("body .wrap").bind('DOMMouseScroll mousewheel', function(e) {
+    $("body .wrap").bind('DOMMouseScroll mousewheel', function (e) {
         e.preventDefault();
         if (!inScroll) {
             inScroll = true;
             let pageHeight = $(window).height();
-    
-            if (( e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1) ) < 0 && count < (maxCount - 1)) {
+
+            if ((e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1)) < 0 && count < (maxCount - 1)) {
                 // scroll down
                 count += 1;
-                $("html, body").animate({ scrollTop: count * pageHeight}, transitionTime);
-            } else if (( e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1) ) > 0 && count > 0) {
+                $("html, body").animate({ scrollTop: count * pageHeight }, transitionTime);
+            } else if ((e.originalEvent.wheelDeltaY || (e.originalEvent.detail * -1)) > 0 && count > 0) {
                 // scroll up
                 count -= 1;
-                $("html, body").animate({ scrollTop: count * pageHeight}, transitionTime);
+                $("html, body").animate({ scrollTop: count * pageHeight }, transitionTime);
             }
 
             setTimeout(() => {
@@ -123,5 +123,7 @@ $(document).ready(function () {
             }, transitionTime + mouseInertionIsFinished);
         }
     });
+
+    /* page slider handler (END) */
 
 });

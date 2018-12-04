@@ -55,6 +55,12 @@ function svgSprite() {
         .pipe(dest('build/sprite/'));
 }
 
+function icons() {
+    let icons = ['app/icons/map-marker.svg'];
+    return src(icons)
+        .pipe(dest('build/icons/'));
+}
+
 function scripts() {
     return src('app/js/*.js')
         .pipe(plumber())
@@ -129,14 +135,15 @@ exports.images = images;
 exports.svgSprite = svgSprite;
 exports.clean = clean;
 exports.watch = watch;
+exports.icons = icons;
 
 exports.build = series(
     clean,
-    parallel(styles, svgSprite, scripts, scriptsVendors, copyHtml, copyFonts, favicon, images)
+    parallel(styles, svgSprite, scripts, scriptsVendors, copyHtml, copyFonts, favicon, images, icons)
 );
 
 exports.default = series(
     clean,
-    parallel(styles, svgSprite, scripts, scriptsVendors, copyHtml, copyFonts, favicon, images),
+    parallel(styles, svgSprite, scripts, scriptsVendors, copyHtml, copyFonts, favicon, images, icons),
     parallel(watcher, serve)
 );
