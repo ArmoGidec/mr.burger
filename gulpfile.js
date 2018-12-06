@@ -108,7 +108,7 @@ function images() {
 }
 
 function clean() {
-    return del('build/');
+    return del(['build/*', '!build/.git']);
 }
 
 function watcher() {
