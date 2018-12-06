@@ -6,11 +6,11 @@
 
             let $parent = $(this).parent(itemSelector);
 
-            let $another = $parent.siblings();
-            $another.removeClass(activeClass);
+            let $active = $(activeClass);
+            $active.removeClass(activeClass);
 
             if (typeof func === "function") {
-                func($another.find(triggerSelector));
+                func($active.find(triggerSelector));
                 func($(this));
             }
 
