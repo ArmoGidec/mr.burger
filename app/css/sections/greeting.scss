@@ -36,16 +36,24 @@
     color: $yellow;
 
     @include tablets {
+        font-size: rem(72px);
+    }
+
+    @include phones {
         font-size: rem(63px);
     }
 }
 
 .greeting__sub-title {
-    width: rem(406px);
+    // width: rem(406px);
     letter-spacing: rem(-1.6px);
     margin-top: rem(20px);
 
     @include tablets {
+        font-size: rem(65px);
+    }
+
+    @include phones {
         font-size: rem(54px);
     }
 }
@@ -56,8 +64,8 @@
 
 .greeting__images .greeting__drops {
     position: absolute;
-    top: rem(40px);
-    left: rem(-30px);
+    top: 13%;
+    left: -4%;
 }
 
 .greeting__img {

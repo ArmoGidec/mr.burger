@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
 
     class VideoPlayer {
@@ -17,30 +15,42 @@ $(document).ready(function () {
                 this.element = element;
                 this.element.src = options.src;
 
-                if (typeof options.height !== 'undefined') {
-                    this.element.height = options.height;
-                }
+                if (typeof options.width === "undefined" && typeof options.height === 'undefined') {
+                    this.setCalculatedSizes();
+                    $(window).resize(this.setCalculatedSizes.bind(this));
+                } else {
+                    if (typeof options.width !== 'undefined') {
+                        this.element.width = options.width;
+                    }
 
-                if (typeof options.width !== 'undefined') {
-                    this.element.width = options.width;
+                    if (typeof options.height !== 'undefined') {
+                        this.element.height = options.height;
+                    }
                 }
 
                 if (typeof options.events.onReady === 'function') {
-                    this.element.addEventListener('canplaythrough', function() {
+                    this.element.addEventListener('canplaythrough', function () {
                         options.events.onReady();
                     });
                 }
 
                 if (typeof options.events.onStateChange === 'function') {
-                    this.element.addEventListener('play', function(e) {
+                    this.element.addEventListener('play', function (e) {
                         options.events.onStateChange(e);
                     });
-                    this.element.addEventListener('pause', function(e) {
+                    this.element.addEventListener('pause', function (e) {
                         options.events.onStateChange(e);
                     });
                 }
             }
             this.status = 'not started yet';
+        }
+
+        setCalculatedSizes() {
+            let width = Math.min($(this.element).parents('.container').width(), 640);
+            let height = width / 16 * 9;
+            this.element.width = width;
+            this.element.height = height;
         }
 
         getDuration() {
@@ -76,8 +86,6 @@ $(document).ready(function () {
 
     let player = new VideoPlayer('work-player', {
         src: 'https://www.videvo.net/videvo_files/converted/2016_11/preview/GOPR6239_1.mov34724.webm',
-        width: 660,
-        height: 405,
         events: {
             'onReady': onPlayerReady,
             'onStateChange': togglePlayerDisplay
@@ -111,17 +119,6 @@ $(document).ready(function () {
     }
 
     function togglePlayerDisplay(event) {
-
-        // -1 – воспроизведение видео не началось
-        // 0 – воспроизведение видео завершено
-        // 1 – воспроизведение
-        // 2 – пауза
-        // 3 – буферизация
-        // 5 – видео находится в очереди
-
-        console.log(event);
-        
-
         switch (event.type) {
             case 'play':
                 $(".player").addClass("player--active");

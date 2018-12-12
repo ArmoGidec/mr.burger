@@ -131,4 +131,20 @@ $(document).ready(function () {
 
     /* page slider handler (END) */
 
+    let responsivePercent = 1.08;
+    let resposiveSize = 1.875;
+    function calculateDropsWidth() {
+        let width = Math.min(450, $(".greeting_img").width() * responsivePercent);
+        let height = width / resposiveSize;
+        $(".greeting__drops").width(width).height(height);
+    }
+
+    calculateDropsWidth();
+    $(window).resize(function() {
+        if ($(this).width() < 570) {
+            //calculate
+            calculateDropsWidth();
+        }
+    });
+
 });

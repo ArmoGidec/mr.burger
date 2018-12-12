@@ -108,12 +108,16 @@ $dark: #626262;
 }
 
 .player__volume {
-    margin-left: 3%;
+    margin-right: 3%;
     flex: 1;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .player__volume-scale {
     width: 50%;
+    @include phones {
+        display: none;
+    }
 }
