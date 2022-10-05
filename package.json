@@ -22,7 +22,7 @@
     "jquery-mousewheel": "^3.1.13"
   },
   "devDependencies": {
-    "autoprefixer": "^8.5.1",
+    "autoprefixer": "^10.4.12",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.13",
@@ -34,7 +34,7 @@
     "gulp-group-css-media-queries": "^1.2.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^7.0.1",
+    "gulp-postcss": "^9.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.1",
